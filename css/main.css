@@ -9,7 +9,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 	font-family: "Raleway";
 }
 .navbar{
-	background:#F97300;
+	background:#0A4389;
 }
 .nav-link , .navbar-brand{
 	color: #f4f4f4;
@@ -32,20 +32,21 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 /*header style*/
 .header{
-	position: relative;
-	background-image: url('../images/headerback.jpg');
+	background: #449DD1
+	/* position: relative; */
+	/* background-image: url('../images/headerback.jpg'); */
 
-	background-size: cover;
-	background-position: center;
+	/* background-size: cover; */
+	/* background-position: center; */
 }
-.overlay{
+/* .overlay{
 	position: absolute;
 	min-height: 100%;
 	min-width: 100%;
 	left: 0;
 	top: 0;
 	background: rgba(244, 244, 244, 0.79);
-}
+} */
 .description{
     position: absolute;
     top: 30%;
@@ -54,17 +55,18 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 }
 .description h1{
-	color:#F97300 ;
+	color:#ffb6c1 ;
 }
 .description p{
-	color:#666;
+	color:#ffffff;
 	font-size: 20px;
 	width: 50%;
 	line-height: 1.5;
 }
 .description button{
-	border:1px  solid #F97300;
-	background:#F97300;
+	/* border:1px  solid #F97300; */
+	background:#ffb6c1;
+	border: none;
 	color:#fff;
 }
 .about{
@@ -103,18 +105,18 @@ html,h1,h2,h3,h4,h5,h6,a{
 /*Portfolio*/
 .portfolio{
 	margin: 4em 0;
-    position: relative;	
+    position: relative;
 }
 .portfolio h1{
 	color:#F97300;
-	margin: 2em;	
+	margin: 2em;
 }
 .portfolio img{
 	 height: 15rem;
 	 width: 100%;
 	 margin: 1em;
 
-	
+
 
 }
 
@@ -122,11 +124,11 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 .blog{
 	margin: 4em 0;
-	position: relative;	
+	position: relative;
 }
 .blog h1{
 	color:#F97300;
-	margin: 2em;	
+	margin: 2em;
 }
 .blog .card{
 	box-shadow: 0 0 20px #ccc;
@@ -138,11 +140,11 @@ html,h1,h2,h3,h4,h5,h6,a{
 @media and (max-width: 768px){
  .team .item img{
  	width: 100%;
- }	
+ }
 }
 .blog .card-title{
 	color:#F97300;
-	 
+
 }
 .blog .card-body{
 	padding: 1em;
@@ -154,11 +156,11 @@ html,h1,h2,h3,h4,h5,h6,a{
 }
 .team h1{
 	color:#F97300;
-	margin: 2em;	
+	margin: 2em;
 }
 .team .item{
 	position: relative;
-	overflow: hidden;	
+	overflow: hidden;
 }
 .team .des{
 	background: #F97300;
@@ -183,12 +185,12 @@ html,h1,h2,h3,h4,h5,h6,a{
 }
 .contact-form{
 	margin: 6em 0;
-	position: relative;		
+	position: relative;
 }
 
 .contact-form h1{
 	padding:2em 1px;
-	color: #F97300; 
+	color: #F97300;
 }
 .contact-form .right{
 	max-width: 600px;
