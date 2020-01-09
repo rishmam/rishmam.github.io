@@ -3,7 +3,9 @@
 body{
 	padding: 0;
 	margin: 0;
-	background:#f4f4f4;
+	/* background:#f4f4f4; */
+	background: #449DD1;
+	/* background: #0A4389; */
 }
 html,h1,h2,h3,h4,h5,h6,a{
 	font-family: "Raleway";
@@ -73,11 +75,20 @@ html,h1,h2,h3,h4,h5,h6,a{
 	margin: 4em 0;
 	padding: 1em;
 	position: relative;
+	background-color: #449DD1;
 }
 .about h1{
-	color:#F97300;
+	color: #ffffff;
+	/* color:#F97300; */
 	margin: 2em;
 }
+.about button{
+	background-color: #7EC4CE;
+	border: none;
+	color: #ffffff;
+
+}
+
 .about img{
 	height: 100%;
     width: 100%;
@@ -93,31 +104,34 @@ html,h1,h2,h3,h4,h5,h6,a{
 	padding: 2em;
 	border-left:4px solid #10828C;
 }
-.about .desc h3{
-	color: #10828C;
+.about h3{
+	/* color: #10828C; */
+  color: #ffffff;
+	background-color: #7EC4CE;
+	display: inline;
 }
-.about .desc p{
+
+.about p{
 	line-height:2;
-	color:#888;
+	/* color:#888; */
+	color: #ffffff;
 }
 
 
 /*Portfolio*/
 .portfolio{
 	margin: 4em 0;
-    position: relative;
+  position: relative;
+	background-color: #449DD1;
 }
 .portfolio h1{
-	color:#F97300;
+	color:#ffffff;
 	margin: 2em;
 }
 .portfolio img{
 	 height: 15rem;
 	 width: 100%;
 	 margin: 1em;
-
-
-
 }
 
 /*blog style*/
@@ -125,9 +139,10 @@ html,h1,h2,h3,h4,h5,h6,a{
 .blog{
 	margin: 4em 0;
 	position: relative;
+	background-color: #449DD1;
 }
 .blog h1{
-	color:#F97300;
+	color:#ffffff;
 	margin: 2em;
 }
 .blog .card{
@@ -149,7 +164,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 .blog .card-body{
 	padding: 1em;
 }
-.team{
+/* .team{
 	margin: 4em 0;
 	position: relative;
 
@@ -182,21 +197,27 @@ html,h1,h2,h3,h4,h5,h6,a{
 	padding: 5em;
 	top: 0;
 	border-top-right-radius: 0;
-}
+} */
 .contact-form{
+	width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  /* display: inline-block; */
 	margin: 6em 0;
-	position: relative;
+	/* position: relative; */
+	background-color: #449DD1;
 }
 
 .contact-form h1{
 	padding:2em 1px;
-	color: #F97300;
+	text-align: center;
+	color: #ffffff;
 }
 .contact-form .right{
 	max-width: 600px;
 }
 .contact-form .right .btn-secondary{
-	background:  #F97300;
+	background:  #7EC4CE;
 	color: #fff;
 	border:0;
 }
@@ -204,3 +225,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 	color: #888;
 	font-size: 16px;
 }
+
+.table th, .table td {
+     border-top: none !important;
+ }
