@@ -128,6 +128,11 @@ html,h1,h2,h3,h4,h5,h6,a{
 	color:#ffffff;
 	margin: 2em;
 }
+.portfolio h3{
+	color:#ffb6c1;
+	/* text-align: center; */
+	margin: 0 auto;
+}
 .portfolio img{
 	 height: 15rem;
 	 width: 100%;

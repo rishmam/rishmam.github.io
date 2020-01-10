@@ -21,13 +21,16 @@
 	    <ul class="navbar-nav mr-4">
 
 	      <li class="nav-item">
-	        <a class="nav-link" data-value="about" href="#">home</a>
+	        <a class="nav-link" data-value="header" href="#">home</a>
+	      </li>
+				<li class="nav-item">
+	        <a class="nav-link " data-value="blog" href="#">survey</a>
 	      </li>
 	      <li class="nav-item">
+	        <a class="nav-link " data-value="portfolio" href="#">matches</a>
+	      </li>
+				<li class="nav-item">
 	        <a class="nav-link " data-value="about" href="#">faq</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link " data-value="blog" href="#">profile</a>
 	      </li>
 	    </ul>
 
@@ -85,9 +88,12 @@
 
 <!-- portfolio -->
 <div class="portfolio" id="portfolio">
-     <h1 class="text-center">Profile</h1>
+     <h1 class="text-center">Matches</h1>
 	<div class="container">
 		<div class="row">
+			<h3>
+				It's not February 14th yet!  Who could your match be?
+			</h3>
 			<!-- <div class="col-lg-4 col-md-4 col-sm-12">
 				<img src="images/portfolio/port1.png" class="img-fluid">
 			</div> -->
@@ -147,7 +153,29 @@
 <div class="contact-form" id="contact">
 	<div class="container">
 		<h1>Contact Us</h1>
-		<form>
+		<input type="button" onclick=callGoogleSignIn() value="Google Sign In"/>
+<script>
+      function callGoogleSignIn(){
+          var provider = new firebase.auth.GoogleAuthProvider();
+          firebase.auth().signInWithPopup(provider).then(function(result) {
+               // This gives you a Google Access Token. You can use it to access the Google API.
+                var token = result.credential.accessToken;
+               // The signed-in user info.
+               var user = result.user;
+               // ...
+         }).catch(function(error) {
+             // Handle Errors here.
+               var errorCode = error.code;
+               var errorMessage = error.message;
+               // The email of the user's account used.
+               var email = error.email;
+               // The firebase.auth.AuthCredential type that was used.
+               var credential = error.credential;
+            // ...
+         });
+      }
+</script>
+		<!-- <form>
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-12">
 
@@ -167,7 +195,7 @@
 				   <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
 				</div>
 			</div>
-		</form>
+		</form> -->
 	</div>
 </div>
 <!-- add Javasscript file from js file -->
