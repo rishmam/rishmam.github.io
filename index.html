@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Bootstrap 4 landing page</title>
+	<title>bearpairs</title>
 	 <!-- add bootstrap css file -->
 
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -12,7 +12,7 @@
   <!-- navbar -->
 
   <nav class="navbar navbar-expand-lg fixed-top ">
-	  <a class="navbar-brand" href="#">BearPairs</a>
+	  <a class="navbar-brand" href="#">bearpairs</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -21,16 +21,20 @@
 	    <ul class="navbar-nav mr-4">
 
 	      <li class="nav-item">
-	        <a class="nav-link" data-value="header" href="#">home</a>
+	        <!-- <a class="nav-link" data-value="header" href="#">home</a> -->
+					<a class="nav-link" href="./index.html">home</a>
 	      </li>
 				<li class="nav-item">
-	        <a class="nav-link " data-value="blog" href="#">survey</a>
+					<a class="nav-link" href="./survey.html">survey</a>
+	        <!-- <a class="nav-link " data-value="blog" href="#">survey</a> -->
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link " data-value="portfolio" href="#">matches</a>
+					<a class="nav-link" href="./matches.html">matches</a>
+	        <!-- <a class="nav-link " data-value="portfolio" href="#">matches</a> -->
 	      </li>
 				<li class="nav-item">
-	        <a class="nav-link " data-value="about" href="#">faq</a>
+					<a class="nav-link" href="./faq.html">faq</a>
+	        <!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 	      </li>
 	    </ul>
 
@@ -45,159 +49,34 @@
   		this valentine's day,
   		<p>
   		get matches made just for you.</p>
-  		<button class="btn btn-outline-secondary btn-lg">take the survey</button>
+			<form method="get" action="./survey.html">
+    		<button type="submit">take the survey</button>
+			</form>
+  		<!-- <button class="btn btn-outline-secondary btn-lg" onclick="window.location.href = ./survey.html">take the survey</button> -->
+			<!-- <button onclick="window.location.href = 'https://w3docs.com';">Click Here</button> -->
   	</h1>
+		<div class="row">
+  		<!-- <div class="col-1">
+				<img src="images/bearpairs_logo.png" class="img-fluid">
+			</div> -->
+
+			<!-- BEAR IMAGE CODE BELOW -->
+
+  		<!-- <div class="col-md-6">
+				<img src="images/bearpairs_logo.png" class="img-fluid">
+			</div> -->
+
+			<!-- <div class="col-lg-4 col-md-4 col-sm-12"> -->
+				<!-- <img src="images/bearpairs_logo.png" class="img-fluid"> -->
+				<!-- <span class="text-justify"></span> -->
+			<!-- </div> -->
+		</div>
   </div>
    </div>
 
 </header>
 
-<!-- about section -->
-<div class="about" id="about">
-	<div class="container">
-	  <h1 class="text-center">FAQ</h1>
-		<!-- <div class="row"> -->
-			<!-- <div class="col-lg-4 col-md-4 col-sm-12"> -->
-				<!-- <img src="images/team-3.jpg" class="img-fluid">
-				<span class="text-justify">S.Web Developer</span> -->
-			<!-- </div> -->
-			<!-- <div class="col-lg-8 col-md-8 col-sm-12 desc"> -->
-				<div>
-				<h3>What is BearPairs?</h3>
-				<!-- <button class="btn btn-outline-secondary btn-lg">What is BearPairs?</button> -->
-				<p>
-				  BearPairs is a website with a goal - match Berkeley students for Valentine's Day!
-					No one should have to be alone on February 14th, so we've made it our goal to match students based on attributes, personality, and other quirks :)
-					We hope that you can find someone special!
-				</p>
-				<h3>How can I sign up?</h3>
-				<!-- <button class="btn btn-outline-secondary btn-lg">How can I sign up?</button> -->
-				<p>
-					It's super easy!  Just create an account, fill out the survey, and wait for your profiles.
-					You'll be able to see your matches and their profiles, and then you can go ahead and set up a date!
-				</p>
-				<h3>When will I get my matches?</h3>
-				<!-- <button class="btn btn-outline-secondary btn-lg">When will I get my matches?</button> -->
-				<p>
-				  Nice job filling out the survey and getting set up!  You'll get your matches by February 13th, and then you can set up that perfect Valentine's day date!
-				</p>
-			</div>
-		<!-- </div> -->
-	</div>
-</div>
 
-<!-- portfolio -->
-<div class="portfolio" id="portfolio">
-     <h1 class="text-center">Matches</h1>
-	<div class="container">
-		<div class="row">
-			<h3>
-				It's not February 14th yet!  Who could your match be?
-			</h3>
-			<!-- <div class="col-lg-4 col-md-4 col-sm-12">
-				<img src="images/portfolio/port1.png" class="img-fluid">
-			</div> -->
-		</div>
-	</div>
-</div>
-
-
-<!-- Posts section -->
-<div class="blog" id="blog">
-	<div class="container">
-	<h1 class="text-center">Survey</h1>
-		<div class="row">
-			<div class="typeform-widget" data-url="https://emilyemch.typeform.com/to/tXYYEJ" data-hide-headers=true data-hide-footer=true style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> powered by <a href="https://admin.typeform.com/signup?utm_campaign=tXYYEJ&utm_source=typeform.com-12687271-Free&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN" style="color: #999" target="_blank">Typeform</a> </div>
-		</div>
-	</div>
-</div>
-
-<!-- Team section -->
-<!-- <div class="team" id="team">
-	<div class="container">
-	   <h1 class="text-center">Our Team</h1>
-		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-12 item">
-				<img src="images/team-2.jpg" class="img-fluid" alt="team">
-				<div class="des">
-				 	Sara
-				 </div>
-				<span class="text-muted">Manager</span>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-12 item">
-				<img src="images/team-3.jpg" class="img-fluid" alt="team">
-				<div class="des">
-				 	 Chris
-				 </div>
-				<span class="text-muted">S.enginner</span>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-12 item">
-				<img src="images/team-2.jpg" class="img-fluid" alt="team">
-				<div class="des">
-				 	Layla
-				 </div>
-				<span class="text-muted">Front End Developer</span>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-12 item">
-				<img src="images/team-3.jpg" class="img-fluid" alt="team">
-				 <div class="des">
-				 	J.Jirard
-				 </div>
-				<span class="text-muted">Team Manger</span>
-			</div>
-		</div>
-	</div>
-</div> -->
-
-<!-- Contact form -->
-<div class="contact-form" id="contact">
-	<div class="container">
-		<h1>Contact Us</h1>
-		<input type="button" onclick=callGoogleSignIn() value="Google Sign In"/>
-<script>
-      function callGoogleSignIn(){
-          var provider = new firebase.auth.GoogleAuthProvider();
-          firebase.auth().signInWithPopup(provider).then(function(result) {
-               // This gives you a Google Access Token. You can use it to access the Google API.
-                var token = result.credential.accessToken;
-               // The signed-in user info.
-               var user = result.user;
-               // ...
-         }).catch(function(error) {
-             // Handle Errors here.
-               var errorCode = error.code;
-               var errorMessage = error.message;
-               // The email of the user's account used.
-               var email = error.email;
-               // The firebase.auth.AuthCredential type that was used.
-               var credential = error.credential;
-            // ...
-         });
-      }
-</script>
-		<!-- <form>
-			<div class="row">
-				<div class="col-lg-4 col-md-4 col-sm-12">
-
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-12 right">
-				   <div class="form-group">
-				   	 <input type="text" class="form-control form-control-lg" placeholder="Your Name" name="">
-				   </div>
-				   <div class="form-group">
-				   	 <input type="email" class="form-control form-control-lg" placeholder="Email" name="email">
-				   </div>
-				   <div class="form-group">
-				   	 <textarea class="form-control form-control-lg">
-
-				   	 </textarea>
-				   </div>
-				   <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
-				</div>
-			</div>
-		</form> -->
-	</div>
-</div>
 <!-- add Javasscript file from js file -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
