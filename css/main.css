@@ -122,6 +122,11 @@ html,h1,h2,h3,h4,h5,h6,a{
 	display: inline;
 }
 
+.about h2{
+	color: #ffffff;
+	display: inline;
+}
+
 .about p{
 	line-height:2;
 	/* color:#888; */
@@ -180,31 +185,49 @@ html,h1,h2,h3,h4,h5,h6,a{
 .blog .card-body{
 	padding: 1em;
 }
-/* .team{
+.team{
 	margin: 4em 0;
 	position: relative;
 
 }
 .team h1{
-	color:#F97300;
+	color:#FFFFFF;
 	margin: 2em;
 }
-.team .item{
+/* .team .item{
 	position: relative;
 	overflow: hidden;
-}
+} */
 .team .des{
-	background: #F97300;
+	/* background: #F97300; */
+	/* margin: 2px 0; */
+	/* margin-right: 4px; */
+	margin-left: 4px;
+	margin-right: 1em;
 	color: #fff;
-	text-align: center;
-	border-top-right-radius: 93%;
-	transition:.3s ease-in-out;
+	text-align: left;
+	/* border-top-right-radius: 93%; */
+	/* transition:.3s ease-in-out; */
 	position: absolute;
-	width: 88%;
-	bottom: 24px;
-
-
+	width: 100%;
+	line-height: 2.2em;
+	/* bottom: 24px; */
 }
+
+.team h3{
+	color:#FFFFFF;
+	margin-top: 20px;
+}
+
+.team h2 {
+	color:#FFFFFF;
+	text-align: left;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* }
 .team .item:hover .des{
 	height: 100%;
 	background:#f973007d;
@@ -245,3 +268,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 .table th, .table td {
      border-top: none !important;
  }
+
+ .circular--square {
+  border-radius: 50%;
+}
