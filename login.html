@@ -43,7 +43,7 @@
 
 	  </div>
 	</nav>
-   	<div class="description ">
+   	<div class="description h1 ">
 		<div class="g-signin2" data-onsuccess="onSignIn"></div>
 		<button onclick="signOut()">Sign out (testing)</button>
 		<script>
@@ -55,7 +55,7 @@
 				console.log('Image URL: ' + profile.getImageUrl());
 				console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 				sessionStorage.name = profile.getName();
-				window.location.replace("http://localhost:5500/survey.html");
+				window.location.replace("https://nehana.github.io/survey.html");
 			}
 			function signOut() {
 				gapi.auth2.getAuthInstance().signOut().then(function() {
