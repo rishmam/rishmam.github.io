@@ -11,10 +11,10 @@ html,h1,h2,h3,h4,h5,h6,a{
 	font-family: "Raleway";
 }
 .navbar{
-	background:#0A4389;
+	background:#ffffff;
 }
 .nav-link , .navbar-brand{
-	color: #f4f4f4;
+	color: #449DD1;
 	cursor: pointer;
 }
 .nav-link{
@@ -44,7 +44,6 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 .header img{
 	 /* height: 15rem; */
-	 display:
 	 width: 100%;
 	 /* margin: 6em; */
 	 margin-left: 700px;
