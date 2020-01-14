@@ -54,6 +54,7 @@
 				console.log('Name: ' + profile.getName());
 				console.log('Image URL: ' + profile.getImageUrl());
 				console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+				sessionStorage.name = profile.getName();
 				window.location.replace("http://localhost:5500/survey.html");
 			}
 			function signOut() {
