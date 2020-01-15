@@ -1,116 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>bearpairs</title>
-	 <!-- add bootstrap css file -->
+	<head>
+		<title>BearPairs</title>
+		<!-- add bootstrap css file -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="shortcut icon" href="">
 
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="css/main.css">
-	  <link rel="shortcut icon" href="">
-</head>
-<body>
-  <!-- navbar -->
+	</head>
+	<body>
+	<!-- navbar -->
+		<nav class="navbar navbar-expand-lg fixed-top ">
+		<a class="navbar-brand" href="#">
+			<img src="/images/Logo.jpg" width="30" height="30" alt="">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-  <nav class="navbar navbar-expand-lg fixed-top ">
-	  <a class="navbar-brand" href="#">bearpairs</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-
-	  <div class="collapse navbar-collapse " id="navbarSupportedContent">
-	    <ul class="navbar-nav mr-4">
-				<li class="nav-item">
-					<a class="nav-link" href="./about.html">about</a>
+		<div class="collapse navbar-collapse " id="navbarSupportedContent">
+			<ul class="navbar-nav mr-4">
+					<li class="nav-item">
+						<a class="nav-link" href="./about.html">ABOUT</a>
+						<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./team.html">TEAM</a>
+						<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./faq.html">FAQ</a>
+					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
+					</li>
+					<li class="nav-item">
+						
+					<li class="nav-item">
+							<a class="nav-link" href="./login.html">LOGIN</a>
 					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./team.html">team</a>
-					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./faq.html">faq</a>
-	       		<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
-	      		</li>
-				<li class="nav-item">
-					
-				<li class="nav-item">
-						<a class="nav-link" href="./login.html">login</a>
-				<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
-			  </li>
-	    </ul>
+			</ul>
 
-	  </div>
-</nav>
-<!-- header -->
-<header class="header ">
-  <div class="overlay"></div>
-   <div class="container">
-   	  <div class="description ">
-  	<h1>
-  		this valentine's day,
-  		<p>
-  		get matches made just for you.</p>
-			<form method="get" action="./survey.html">
-    		<button type="submit">take the survey</button>
-			</form>
-  		<!-- <button class="btn btn-outline-secondary btn-lg" onclick="window.location.href = ./survey.html">take the survey</button> -->
-			<!-- <button onclick="window.location.href = 'https://w3docs.com';">Click Here</button> -->
-			<!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
-			<input type="button" onclick=callGoogleSignIn() value="Google Sign In"/>
-			<script>
-			function callGoogleSignIn(){
-          var provider = new firebase.auth.GoogleAuthProvider();
-          firebase.auth().signInWithPopup(provider).then(function(result) {
-               // This gives you a Google Access Token. You can use it to access the Google API.
-               var token = result.credential.accessToken;
-               // The signed-in user info.
-               var user = result.user;
-               // ...
-         }).catch(function(error) {
-             // Handle Errors here.
-               var errorCode = error.code;
-               var errorMessage = error.message;
-               // The email of the user's account used.
-               var email = error.email;
-               // The firebase.auth.AuthCredential type that was used.
-               var credential = error.credential;
-            // ...
-         });
-      }
-			</script>
-			<!-- <h3>hi lol</h3> -->
-  	</h1>
-		<div class="row">
-
-  		<!-- <div class="col-1">
-				<img src="images/bearpairs_logo.png" class="img-fluid">
-			</div> -->
-
-			<!-- BEAR IMAGE CODE BELOW -->
-
-  		<!-- <div class="col-md-6">
-				<img src="images/bearpairs_logo.png" class="img-fluid">
-			</div> -->
-
-			<!-- <div class="col-lg-4 col-md-4 col-sm-12"> -->
-				<!-- <img src="images/bearpairs_logo.png" class="img-fluid"> -->
-				<!-- <span class="text-justify"></span> -->
-			<!-- </div> -->
 		</div>
-  </div>
-   </div>
-
-</header>
-
-
-<!-- add Javasscript file from js file -->
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src='js/main.js'></script>
-
-<!-- add Google Platform Library for Google Sign-In -->
-<script src="https://apis.google.com/js/platform.js"></script>
-<meta name="google-signin-client_id" content="35180848538-cuhdfp0dham997bln0ohbmq679omo6tf.apps.googleusercontent.com.apps.googleusercontent.com">
-
-</body>
+		</nav>
+		<div class="a">
+			<h1> BearPairs </h1>
+			<h2>find your calentine.</h2>
+			<button class="button" onclick="window.location.href = 'https://nehana.github.io/survey.html'';">GET STARTED</button>
+		</div>
+		
+	</body>
 </html>

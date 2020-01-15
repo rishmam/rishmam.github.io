@@ -1,20 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
 
 body{
 	padding: 0;
 	margin: 0;
 	/* background:#f4f4f4; */
-	background: #449DD1;
+	background: #96CDFF;
 	/* background: #0A4389; */
 }
 html,h1,h2,h3,h4,h5,h6,a{
-	font-family: "Raleway";
+	font-family: "Work Sans";
+}
+h1{
+	font-size: 80px;
+	line-height: 117px;
+	letter-spacing: 0.03em;
+}
+h2 {
+	margin-bottom: 35px;
+	letter-spacing: 0.03em;
 }
 .navbar{
 	background:#ffffff;
 }
 .nav-link , .navbar-brand{
-	color: #449DD1;
+	color: #96CDFF;
 	cursor: pointer;
 }
 .nav-link{
@@ -34,7 +43,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 /*header style*/
 .header{
-	background: #449DD1
+	background: #96CDFF
 	/* position: relative; */
 	/* background-image: url('../images/headerback.jpg'); */
 
@@ -59,15 +68,33 @@ html,h1,h2,h3,h4,h5,h6,a{
 	top: 0;
 	background: rgba(244, 244, 244, 0.79);
 } */
+
+div.a {
+	color:#FFFFFF ;
+	margin-top: 350px;
+	text-align: center;
+}
+.button {
+	background-color: #FFD972; 
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	font-size: 20px;
+	font-family: "Work Sans";
+  }
 .description{
     position: absolute;
     top: 30%;
     margin: auto;
-    padding: 2em;
-
+	padding: 2em;
 }
 .description h1{
-	color:#ffb6c1 ;
+	color:#FFFFFF ;
+	margin-top: 150px;
+	text-align: center;
 }
 .description p{
 	color:#ffffff;
@@ -77,7 +104,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 }
 .description button{
 	/* border:1px  solid #F97300; */
-	background:#ffb6c1;
+	background:#FFD972;
 	border: none;
 	color:#fff;
 }
@@ -85,7 +112,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 	margin: 4em 0;
 	padding: 1em;
 	position: relative;
-	background-color: #449DD1;
+	background-color: #96CDFF;
 }
 .about h1{
 	color: #ffffff;
@@ -93,7 +120,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 	margin: 2em;
 }
 .about button{
-	background-color: #7EC4CE;
+	background-color: #96CDFF;
 	border: none;
 	color: #ffffff;
 
@@ -137,7 +164,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 .portfolio{
 	margin: 4em 0;
   position: relative;
-	background-color: #449DD1;
+	background-color: #96CDFF;
 }
 .portfolio h1{
 	color:#ffffff;
