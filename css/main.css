@@ -74,8 +74,9 @@ div.a {
 	margin-top: 350px;
 	text-align: center;
 }
+
 .button {
-	background-color: #FFD972; 
+	background-color: #FFD972;
 	border: none;
 	border-radius: 10px;
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
@@ -109,15 +110,34 @@ div.a {
 	color:#fff;
 }
 .about{
-	margin: 4em 0;
-	padding: 1em;
+	/* margin: 4em 0; */
+	margin: auto;
+	/* padding: 1em; */
 	position: relative;
 	background-color: #96CDFF;
 }
 .about h1{
 	color: #ffffff;
+	position: absolute;
+	/* position: relative; */
+	left: auto;
+	right: auto;
+	display: flex;
+	/* width: 50%; */
+	top: 1em;
+	/* display: inline-block; */
+	font-family: Work Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 100px;
+	line-height: 117px;
+	text-align: center;
+	letter-spacing: 0.03em;
+
+	/* font-family: "Work Sans"; */
+	/* font-weight: medium; */
 	/* color:#F97300; */
-	margin: 2em;
+	/* margin: 2em; */
 }
 .about button{
 	background-color: #96CDFF;
@@ -154,9 +174,24 @@ div.a {
 }
 
 .about p{
-	line-height:2;
+	/* line-height:2; */
 	/* color:#888; */
 	color: #ffffff;
+	position: absolute;
+	width: 786px;
+	height: 354px;
+	left: 604px;
+	top: 716px;
+	/* top: auto; */
+	/* bottom: auto; */
+
+	font-family: Work Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	line-height: 59px;
+	letter-spacing: 0.03em;
+
 }
 
 
@@ -219,11 +254,18 @@ div.a {
 .team h1{
 	color:#FFFFFF;
 	margin: 2em;
+	text-align: center;
 }
 /* .team .item{
 	position: relative;
 	overflow: hidden;
 } */
+
+.team img{
+	width: 28px;
+	padding-top: 40px;
+}
+
 .team .des{
 	/* background: #F97300; */
 	/* margin: 2px 0; */
@@ -237,12 +279,15 @@ div.a {
 	position: absolute;
 	width: 100%;
 	line-height: 2.2em;
+	font-family: "Work Sans";
 	/* bottom: 24px; */
 }
 
 .team h3{
 	color:#FFFFFF;
+	font-family: "Work Sans";
 	margin-top: 20px;
+
 }
 
 .team h2 {
@@ -251,6 +296,18 @@ div.a {
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.team h4 {
+	color: #FFFFFF;
+	text-align: center;
+	/* position: relative; */
+
+	/* margin-top: 50px; */
+	margin-top: 80px;
+	margin-bottom: 80px;
+	font-size: 80px;
+  line-height: 94px;
 }
 
 /* }
@@ -298,3 +355,157 @@ div.a {
  .circular--square {
   border-radius: 50%;
 }
+
+/* progress-style */
+
+
+div.b h1 {
+	color:#FFFFFF ;
+	margin-top: 154px;
+	text-align: center;
+}
+
+div.b h2 {
+	color:#FFFFFF ;
+	margin-top: 80px;
+	text-align: left;
+	/* left: 328px; */
+	position: absolute;
+	/* right: 50px; */
+	/* padding: 100px; */
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+/* sponsor-style */
+
+div.c h1 {
+	color:#FFFFFF ;
+	margin-top: 154px;
+	text-align: center;
+}
+
+div.c h2 {
+	color:#FFFFFF ;
+	margin-top: 62px;
+	text-align: left;
+	/* left: 328px; */
+	position: absolute;
+	/* right: 50px; */
+	/* padding: 100px; */
+	padding-top: 50px;
+	/* padding-bottom: 80px; */
+	padding-left: 300px;
+	padding-right: 300px;
+}
+
+/* faq-style */
+
+div.d h1 {
+	color:#FFFFFF;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 50px;
+}
+
+div.d h3 {
+	color:#FFFFFF;
+	margin-top: 154px;
+	text-align: center;
+	font-size: 50px;
+}
+
+div.d h2 {
+	color:#FFFFFF;
+	margin-top: 62px;
+	text-align: left;
+	font-size: 30px;
+	/* left: 328px; */
+	/* position: absolute; */
+	/* right: 50px; */
+	/* padding: 100px; */
+	font-weight: SemiBold !important;
+	padding-top: 50px;
+	/* padding-bottom: 80px; */
+	padding-left: 277px;
+	padding-right: 277px;
+}
+
+div.d p {
+	color:#FFFFFF;
+	text-align: left;
+	font-family: "Work Sans";
+	font-weight: Regular !important;
+	padding-left: 277px;
+	padding-right: 277px;
+	font-size: 30px;
+}
+
+/* about-style */
+
+div.e h1 {
+	color:#FFFFFF;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 50px;
+}
+
+div.e h3 {
+	color:#FFFFFF;
+	margin-top: 154px;
+	text-align: center;
+	font-size: 50px;
+}
+
+div.e h2 {
+	color:#FFFFFF;
+	margin-top: 62px;
+	text-align: left;
+	font-size: 30px;
+	/* left: 328px; */
+	/* position: absolute; */
+	/* right: 50px; */
+	/* padding: 100px; */
+	font-weight: SemiBold !important;
+	padding-top: 50px;
+	/* padding-bottom: 80px; */
+	padding-left: 277px;
+	padding-right: 277px;
+}
+
+div.e p {
+	color:#FFFFFF;
+	text-align: center;
+	font-family: "Work Sans";
+	font-weight: Regular !important;
+	padding-left: 440px;
+	padding-right: 440px;
+	font-size: 30px;
+}
+
+div.e .button {
+	background-color: #FFD972;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+	color: white;
+	padding: 15px 32px;
+	margin-left: 600px;
+	margin-right: 400px;
+	margin-bottom: 50px;
+	margin-top: 30px;
+
+	/* display: inline-block; */
+	/* left-margin: auto; */
+	/* right-margin: auto; */
+	/* position: absolute; */
+	/* top: 50%; */
+  /* left: 50%; */
+	/* margin-left: auto; */
+	/* margin-right: auto; */
+	text-align: center;
+	font-size: 20px;
+	font-family: "Work Sans";
+  }
