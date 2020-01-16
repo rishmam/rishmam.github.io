@@ -21,13 +21,15 @@ h2 {
 }
 .navbar{
 	background:#ffffff;
+	min-height: 70px;
 }
 .nav-link , .navbar-brand{
 	color: #96CDFF;
 	cursor: pointer;
+	font-size: 20px;
 }
 .nav-link{
-	margin-right: 1em !important;
+	margin-right: 1.5em !important;
 }
 .nav-link:hover{
 	background: #f4f4f4;
@@ -74,6 +76,61 @@ div.a {
 	margin-top: 350px;
 	text-align: center;
 }
+div.b {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	color:#FFFFFF ;
+}
+div.c {
+	color:#FFFFFF ;
+	text-align: center;
+}
+div.d {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+div.e {
+	color:#FFFFFF ;
+	margin-top: 200px;
+	text-align: center;
+}
+.g-signin2{
+	width: 100%;
+}
+.g-signin2 > div{
+	margin: 0 auto;
+}
+.triangle {
+	position: relative;
+	background-color:#FFE8A8;
+	text-align: left;
+}
+.triangle:before,
+.triangle:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+.triangle,
+.triangle:before,
+.triangle:after {
+	width:  2em;
+	height: 2em;
+	border-top-right-radius: 30%;
+}
+
+.triangle {
+	transform: rotate(30deg) skewX(-30deg) scale(1,.866);
+}
+.triangle:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangle:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
 
 .button {
 	background-color: #FFD972;
@@ -90,7 +147,7 @@ div.a {
     position: absolute;
     top: 30%;
     margin: auto;
-	padding: 2em;
+		padding: 2em;
 }
 .description h1{
 	color:#FFFFFF ;
