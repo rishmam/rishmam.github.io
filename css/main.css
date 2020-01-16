@@ -278,13 +278,15 @@ div.e {
 .blog{
 	margin: 4em 0;
 	position: relative;
-	background-color: #449DD1;
+	/* background-color: #96CDFF; */
+	background-color: inherit;
+	/* background-color: #96CDFA; */
 }
 .blog h1{
 	color:#ffffff;
 	margin: 2em;
 }
-.blog .card{
+/* .blog .card{
 	box-shadow: 0 0 20px #ccc;
 }
 .blog .card img{
@@ -297,12 +299,12 @@ div.e {
  }
 }
 .blog .card-title{
-	color:#F97300;
+	color:#96CDFA;
 
 }
 .blog .card-body{
 	padding: 1em;
-}
+} */
 .team{
 	margin: 4em 0;
 	position: relative;
@@ -384,7 +386,8 @@ div.e {
   /* display: inline-block; */
 	margin: 6em 0;
 	/* position: relative; */
-	background-color: #449DD1;
+	/* background-color: #449DD1; */
+	background-color: #96CDFF;
 }
 
 .contact-form h1{
