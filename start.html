@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>BearPairs</title>
+		<!-- add bootstrap css file -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<div class="b">
+			<img src="images/start_logo.png" alt="Bear Logo" height="650" width="650">
+		</div>
+
+	</head>
+	<body>
+		<div class="c">
+			<h1 id="demo"></h1>
+			<script>
+			var countDownDate = new Date("Feb 12, 2020 00:00:00").getTime();
+			var x = setInterval(function() {
+			var now = new Date().getTime();
+			var distance = countDownDate - now;
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			document.getElementById("demo").innerHTML = days + " days " + hours + " hours "
+			+ minutes + " min ";
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("demo").innerHTML = "Happy Valentine's Day!!";
+			}
+			}, 1000);
+			</script>
+		</div>
+		<div class="d">
+			<div class="triangle" onclick="window.location.href = 'https://nehana.github.io/index.html';"></div>
+		</div>
+
+		
+	</body>
+</html>
