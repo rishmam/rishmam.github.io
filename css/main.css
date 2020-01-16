@@ -26,7 +26,7 @@ h2 {
 .nav-link , .navbar-brand{
 	color: #96CDFF;
 	cursor: pointer;
-	
+	font-size: 20px;	
 }
 .nav-link{
 	margin-right: 1.5em !important;
@@ -92,6 +92,17 @@ div.d {
 	top: 30px;
 	right: 30px;
 }
+div.e {
+	color:#FFFFFF ;
+	margin-top: 200px;
+	text-align: center;
+}
+.g-signin2{
+	width: 100%;
+}
+.g-signin2 > div{
+	margin: 0 auto;
+}
 .triangle {
 	position: relative;
 	background-color:#FFE8A8;
@@ -120,6 +131,7 @@ div.d {
 .triangle:after {
 	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
 }
+
 .button {
 	background-color: #FFD972; 
 	border: none;

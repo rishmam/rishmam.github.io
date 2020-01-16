@@ -3,8 +3,7 @@
 <head>
 		<meta name="google-signin-client_id" content="287779324897-bhjpqlec48lt942qe0qsu5f5st023rj5.apps.googleusercontent.com">
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
-		
-	<title>bearpairs</title>
+	<title>BearPairs</title>
 	 <!-- add bootstrap css file -->
 
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -24,47 +23,33 @@
 	  <div class="collapse navbar-collapse " id="navbarSupportedContent">
 	    <ul class="navbar-nav mr-4">
 				<li class="nav-item">
-					<a class="nav-link" href="./about.html">about</a>
+					<a class="nav-link" href="./about.html">ABOUT</a>
 					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="./team.html">team</a>
+					<a class="nav-link" href="./team.html">TEAM</a>
 					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="./faq.html">faq</a>
+					<a class="nav-link" href="./faq.html">FAQ</a>
 	       		<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 	      		</li>
 				<li class="nav-item">
 					
 				<li class="nav-item">
-						<a class="nav-link" href="./login.html">login</a>
+						<a class="nav-link" href="./homepage.html">LOGOUT</a>
 				<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 			  </li>
 	    </ul>
 
 	  </div>
 	</nav>
-	<div class="e ">
-		<h1> Login </h1>
+	<div class="a">
+		<h1> Welcome </h1>
+		<h2>It's time to take the survey.</h2> 
+		<button class="button" onclick="window.location.href = 'https://nehana.github.io/survey.html';">GO!</button>
+
 	</div>
-	
-   	<div class="e">
-		<div class="g-signin2" data-onsuccess="onSignIn" -theme="light" data-width="300" data-height="50"
-		data-longtitle="true"></div>
-		<script>
-			signedIn = true;
-			function onSignIn(googleUser) {
-				var profile = googleUser.getBasicProfile();
-				console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-				console.log('Name: ' + profile.getName());
-				console.log('Image URL: ' + profile.getImageUrl());
-				console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-				sessionStorage.name = profile.getName();
-				window.location.replace("https://nehana.github.io/welcome.html");
-			}
-		</script>
-   	</div>
 
 <!-- add Javasscript file from js file -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
