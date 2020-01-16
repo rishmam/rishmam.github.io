@@ -8,53 +8,45 @@
 
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="css/main.css">
-	  
+
 </head>
 <body>
-  <!-- navbar -->
-  	<nav class="navbar navbar-expand-lg fixed-top ">
+	<!-- navbar -->
+		<nav class="navbar navbar-expand-lg fixed-top ">
 		<a class="navbar-brand" href="./homepage.html">
 			<img src="/images/start_logo.png" width="40" height="40" alt="">
 		</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-	  <div class="collapse navbar-collapse " id="navbarSupportedContent">
-	    <ul class="navbar-nav mr-4">
-				<li class="nav-item">
-					<a class="nav-link" href="./about.html">ABOUT</a>
+		<div class="collapse navbar-collapse " id="navbarSupportedContent">
+			<ul class="navbar-nav mr-4">
+					<li class="nav-item">
+						<a class="nav-link" href="./about2.html">ABOUT</a>
+						<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./team.html">TEAM</a>
+						<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./faq2.html">FAQ</a>
+					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
+					</li>
+					<li class="nav-item">
+
+					<li class="nav-item">
+							<a class="nav-link" href="./login.html">LOGIN</a>
 					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./team.html">TEAM</a>
-					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./faq.html">FAQ</a>
-	       		<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
-	      		</li>
-				<li class="nav-item">
-					
-				<li class="nav-item">
-						<a class="nav-link" onclick="signOut();" href="./homepage.html">LOGOUT</a>
-				<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
-			  	</li>
-				<script>
-				function signOut() {
-					var auth2 = gapi.auth2.getAuthInstance();
-					auth2.signOut().then(function () {
-					console.log('User signed out.');
-					});
-				}
-				</script>
-	    </ul>
+			</ul>
 
-	  </div>
-	</nav>
+		</div>
+		</nav>
 	<div class="a">
 		<h1> Welcome </h1>
-		<h2>It's time to take the survey.</h2> 
+		<h2>It's time to take the survey.</h2>
 		<button class="button" onclick="window.location.href = 'https://nehana.github.io/survey.html';">GO!</button>
 
 	</div>
