@@ -11,6 +11,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 	font-family: "Work Sans";
 }
 h1{
+	color:#ffffff;
 	font-size: 80px;
 	line-height: 117px;
 	letter-spacing: 0.03em;
@@ -80,7 +81,7 @@ h2 {
 	height: 900px;
 	position: relative;
 	text-align: center;
-	color: #FFFFFF;
+	color:
   }
   
   .center {
