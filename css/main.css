@@ -71,9 +71,29 @@ h2 {
 	background: rgba(244, 244, 244, 0.79);
 } */
 
+.start h1{
+	color:#FFFFFF ;
+	margin: auto;
+	text-align: center;
+}
+.homepage {
+	height: 900px;
+	position: relative;
+	text-align: center;
+	color: #FFFFFF;
+  }
+  
+  .center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+  }
 div.a {
 	color:#FFFFFF ;
-	margin-top: 350px;
+	top: 50%;
 	text-align: center;
 }
 div.b {
@@ -329,7 +349,7 @@ div.e {
 .team .des{
 	/* background: #F97300; */
 	/* margin: 2px 0; */
-	/* margin-right: 4px; */
+	/* margin-right: 4px; */	
 	margin-left: 4px;
 	margin-right: 1em;
 	color: #fff;
