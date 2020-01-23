@@ -238,7 +238,22 @@ div.e {
 	font-size: 50px;
 	line-height: 59px;
 	letter-spacing: 0.03em;
+}
 
+.about h5 {
+	color: #ffffff;
+	position: absolute;
+	left: auto;
+	right: auto;
+	display: flex;
+	top: 2em;
+	font-family: Work Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 100px;
+	line-height: 117px;
+	text-align: center;
+	letter-spacing: 0.03em;
 }
 
 
