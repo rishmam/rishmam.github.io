@@ -137,6 +137,17 @@ div.e {
 	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
 }
 
+@keyframes shadow-pulse
+{
+     0% {
+          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+     }
+     100% {
+          box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+     }
+}
+
+
 .button {
 	background-color: #FFD972;
 	border: none;
@@ -147,6 +158,7 @@ div.e {
 	text-align: center;
 	font-size: 20px;
 	font-family: "Work Sans";
+	animation: shadow-pulse 1s infinite;
   }
 .description{
     position: absolute;
