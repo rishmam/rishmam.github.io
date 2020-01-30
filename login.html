@@ -41,6 +41,45 @@
 							<a class="nav-link" href="./login.html">LOGIN</a>
 					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 				</li>
+				<li class="nav-item">
+					<a class="nav-link">
+					<div class="start">
+						<!-- <h1 id="demo"></h1> -->
+						<button class="button4" id="demo" onclick="window.location.href = 'https://nehana.github.io/login.html';">GET STARTED</button>
+						<script>
+						var countDownDate = new Date("Feb 31, 2020 00:00:00").getTime();
+						var x = setInterval(function() {
+						var now = new Date().getTime();
+						var distance = countDownDate - now;
+						var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+						if (days < 10) {
+							days = "0" + days;
+						}
+						var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+						if (hours < 10) {
+							hours = "0" + hours;
+						}
+						var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+						if (minutes < 10) {
+							minutes = "0" + minutes;
+						}
+						var seconds = Math.floor((distance % (1000 * 60)) / (1000));
+						if (seconds < 10) {
+							seconds = "0" + seconds;
+						}
+						// document.getElementById("demo").innerHTML = days + " days " + hours + " hours "
+						// + minutes + " min " + seconds + " seconds";
+						document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+						+ minutes + " : " + seconds;
+						if (distance < 0) {
+							clearInterval(x);
+							document.getElementById("demo").innerHTML = "Happy Valentine's Day!!";
+						}
+						}, 1000);
+						</script>
+					</div>
+					</a>
+				</li>
 			</ul>
 
 		</div>
@@ -58,7 +97,7 @@
 	<style>
 	.special-login {
 		color:#FFFFFF ;
-		margin-top: 100px;
+		margin-top: 50px;
 		text-align: center;
 	}
 	.special-login h1 {
@@ -71,7 +110,7 @@
 	}
 	.special-login h2 {
 		color:#FFFFFF;
-		margin-top: 50px;
+		margin-top: 10px;
 		margin-bottom: 50px;
 		text-align: center;
 		font-size: 30px;
@@ -93,8 +132,87 @@
 	z-index: -1;
 	}
 </style>
+<div class="button2">
+<onclick="window.location.href = 'https://nehana.github.io/login.html';">SIGN IN WITH GOOGLE</button>
+</div>
 
-<!-- <button class="button" onclick="window.location.href = 'https://nehana.github.io/login.html';">GET STARTED</button> -->
+<div class="button3">
+<onclick="window.location.href = 'https://nehana.github.io/login.html';">
+</div>
+
+<div class="Gimage">
+	<img alt="Google" src="images/google_logo.png" class="center1">
+</div>
+<style>
+.center1 {
+  display: block;
+  margin-left: 38%;
+  margin-right: 62%;
+	margin-top: -75px;
+  /* width: 50%; */
+}
+</style>
+
+<!--
+<style>
+	.Gimage img {
+		margin: 0 auto;
+	}
+</style> -->
+
+<!-- <a href="https://www.linkedin.com/in/angelapl/">
+<img alt="LinkedIn" src="images/new_white_linkedin_logo.png" class="img-fluid">
+</a> -->
+
+
+
+
+<!-- <div class="button3">
+<button class="button3" onclick="window.location.href = 'https://nehana.github.io/login.html';">SIGN</button>
+</div> -->
+
+<style>
+
+.button2 {
+	background-color: #FF6978;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+	color: white;
+	padding: 15px 32px;
+	text-align: right;
+	/* vertical-align: middle; */
+	font-size: 20px;
+	font-family: "Work Sans";
+	/* animation: shadow-pulse 1s infinite; */
+	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+  width: 400px;
+  }
+
+	.button3 {
+		/* margin: 0 auto; */
+		background-color: #FFFFFF;
+		border: none;
+		border-radius: 10px;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		font-size: 20px;
+		font-family: "Work Sans";
+		/* animation: shadow-pulse 1s infinite; */
+		height: 100px;
+	  width: 100px;
+		margin-left: 35%;
+	  margin-right: 65%;
+		margin-top: -100px;
+	  }
+
+</style>
+
 
 <div class="square"></div>
 

@@ -14,7 +14,8 @@
 
 	<body>
 		<div class="start">
-			<h1 id="demo"></h1>
+			<!-- <h1 id="demo"></h1> -->
+			<button class="button" id="demo" onclick="window.location.href = 'https://nehana.github.io/login.html';">GET STARTED</button>
 			<script>
 			var countDownDate = new Date("Feb 31, 2020 00:00:00").getTime();
 			var x = setInterval(function() {
@@ -24,8 +25,10 @@
 			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 			var seconds = Math.floor((distance % (1000 * 60)) / (1000));
-			document.getElementById("demo").innerHTML = days + " days " + hours + " hours "
-			+ minutes + " min " + seconds + "seconds";
+			// document.getElementById("demo").innerHTML = days + " days " + hours + " hours "
+			// + minutes + " min " + seconds + " seconds";
+			document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+			+ minutes + " : " + seconds;
 			if (distance < 0) {
 				clearInterval(x);
 				document.getElementById("demo").innerHTML = "Happy Valentine's Day!!";
