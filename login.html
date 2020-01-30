@@ -217,7 +217,7 @@
 <div class="square"></div>
 
    	<div class="homepage">
-		<div class="g-signin2" data-onsuccess="onSignIn" -theme="dark" data-width="300" data-height="50"
+		<div class="g-signin2" data-onsuccess="onSignIn" -theme="light" data-width="300" data-height="50"
 		data-longtitle="true"></div>
 		<script>
 			signedIn = true;
@@ -230,6 +230,18 @@
 				sessionStorage.name = profile.getName();
 				window.location.replace("https://nehana.github.io/welcome.html");
 			}
+			function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+ 
 		</script>
    	</div>
 
