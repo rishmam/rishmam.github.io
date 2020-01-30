@@ -474,6 +474,8 @@ div.e h5 {
 	font-size: 30px;
 }
 
+
+
 div.d p {
 	color:#FFFFFF;
 	text-align: left;
@@ -541,6 +543,26 @@ div.e p {
 	padding-left: 400px;
 	padding-right: 400px;
 	font-size: 30px;
+}
+
+div.e p2 {
+	color:#FFFFFF;
+	text-align: center;
+	font-family: "Work Sans";
+	font-weight: Regular !important;
+	/* padding-left: 500px; */
+	/* padding-right: 400px; */
+	font-size: 25px;
+}
+
+div.e p3 {
+	color:#FFFFFF;
+	text-align: center;
+	font-family: "Work Sans";
+	font-weight: Regular !important;
+	padding-left: 400px;
+	padding-right: 400px;
+	font-size: 20px;
 }
 
 div.e .button {
