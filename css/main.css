@@ -584,3 +584,5 @@ div.e .button {
 
 	/* link-styling */
 	a { color: white; }
+
+	nav ul {list-style: none;}
