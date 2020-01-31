@@ -22,21 +22,54 @@
 				<ul class="navbar-nav mr-4">
 						<li class="nav-item">
 							<a class="nav-link" href="./about2.html">ABOUT</a>
-							<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
+
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="./team.html">TEAM</a>
-							<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="./faq2.html">FAQ</a>
-						<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 						</li>
 						<li class="nav-item">
 
 						<li class="nav-item">
 								<a class="nav-link" href="./login.html">LOGIN</a>
-						<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
+					</li>
+					<li class="nav-item">
+						<a class="nav-link">
+						<div class="start">
+							<button class="button4" id="demo" onclick="window.location.href = 'https://nehana.github.io/login.html';"></button>
+							<script>
+							var countDownDate = new Date("Feb 31, 2020 00:00:00").getTime();
+							var x = setInterval(function() {
+							var now = new Date().getTime();
+							var distance = countDownDate - now;
+							var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+							if (days < 10) {
+								days = "0" + days;
+							}
+							var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+							if (hours < 10) {
+								hours = "0" + hours;
+							}
+							var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+							if (minutes < 10) {
+								minutes = "0" + minutes;
+							}
+							var seconds = Math.floor((distance % (1000 * 60)) / (1000));
+							if (seconds < 10) {
+								seconds = "0" + seconds;
+							}
+							document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+							+ minutes + " : " + seconds;
+							if (distance < 0) {
+								clearInterval(x);
+								document.getElementById("demo").innerHTML = "Happy Valentine's Day!!";
+							}
+							}, 1000);
+							</script>
+						</div>
+						</a>
 					</li>
 				</ul>
 
