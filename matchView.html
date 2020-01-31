@@ -1,0 +1,108 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Matches</title>
+  <!-- add bootstrap css file -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  
+</head>
+
+<body id="get-big" onload="matchLoad()">
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top ">
+		<a class="navbar-brand" href="./homepage.html">
+			<img src="/images/start_logo.png" width="40" height="40" alt="">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse " id="navbarSupportedContent">
+			<ul class="navbar-nav mr-4">
+					<li class="nav-item">
+						<a class="nav-link" href="./about2.html">ABOUT</a>
+						<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./team.html">TEAM</a>
+						<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./faq2.html">FAQ</a>
+					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
+					</li>
+					<li class="nav-item">
+
+					<li class="nav-item">
+							<a class="nav-link" href="./login.html">LOGIN</a>
+					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
+				</li>
+			</ul>
+
+		</div>
+		</nav>
+    <div class="c">
+      <h1>Say hi!</h1>
+    </div>
+    <div class="a" >
+        <div id="match-picture" class="avatar">  </div>
+    </div>
+    <br>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyCvpEisytGcXdAqjyxrWiDrAvqy86Bi6Dk",
+          authDomain: "bearp-493dc.firebaseapp.com",
+          databaseURL: "https://bearp-493dc.firebaseio.com",
+          projectId: "bearp-493dc",
+          storageBucket: "bearp-493dc.appspot.com",
+          messagingSenderId: "714702346867"
+      }
+      firebase.initializeApp(config);
+    </script>
+    <script>
+      const matchLoad = async() => {
+        console.log("test");
+        const userEmail = sessionStorage.email;
+        const db = firebase.firestore();
+
+        const users = db.collection('users');
+            const res = await getMatches();
+            console.log(res);
+            const matchPic = document.querySelector("#match-picture");
+            const matchName = document.querySelector("#match-name");
+            const matchTweet = document.querySelector("#match-tweet");
+            var x = sessionStorage.matchView;
+            var id = "match-picture-" + x;
+            console.log(id);
+            //document.getElementById(id).src = res[x].picture;
+            document.getElementById(id).style = "background-image: url('" + res[x].picture + "');";
+        };
+
+        const getMatches = async () => {
+            const userEmail = sessionStorage.email;
+            const db = firebase.firestore();
+            const users = db.collection('users');
+            const querySnapshot = await users.get();
+            const docSnapshots = querySnapshot.docs;
+            let list = [];
+            for (var i in docSnapshots) {
+              for (var j in docSnapshots[i].data().matchEmails) {
+                if (docSnapshots[i].data().matchEmails[j] == ("jerryjiao@berkeley.edu")) {
+                  console.log(docSnapshots[i].data().name);
+                  list.push({email: docSnapshots[i].data().email, name: docSnapshots[i].data().name, picture: docSnapshots[i].data().picture, tweet: docSnapshots[i].data().tweet});
+                }
+              }
+            }
+            return list;
+        }
+    </script>
+</body>
+</html>

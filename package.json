@@ -1,0 +1,24 @@
+{
+  "name": "uploaddatatofirestore",
+  "version": "1.0.0",
+  "description": "Upload Data to Firebase Firestore Cloud Database",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nehana/nehana.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nehana/nehana.github.io/issues"
+  },
+  "homepage": "https://github.com/nehana/nehana.github.io#readme",
+  "dependencies": {
+    "firebase": "^7.7.0",
+    "firebase-admin": "^8.9.2",
+    "requirejs": "^2.3.6"
+  }
+}
