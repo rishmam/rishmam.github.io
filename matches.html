@@ -37,15 +37,24 @@
 					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 					</li>
 					<li class="nav-item">
-
+          
 					<li class="nav-item">
 							<a class="nav-link" href="./login.html">LOGIN</a>
 					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 				</li>
 			</ul>
 
-		</div>
-		</nav>
+    </div> 
+  </nav>
+  <div class="c">
+    <h1>Matching in progress...</h1>
+    <h1>🔎</h1>
+    <br>
+    <br>
+    <br>
+    <h3>In the meantime, check out our FAQ for questions, browse through the BearPairs perks in the About section, contact us for unaddressed questions or issues, and keep being awesome. Go Bears!</h2>
+  </div>
+    <!--
     <div class="c">
       <h1>Your matches have arrived.</h1>
       <div class="loader" id="loading-image"></div>
@@ -55,10 +64,10 @@
         <div id="match-picture-1" class="avatar" onClick="seeMatch1()"> </div>
         <div id="match-picture-2" class="avatar" onClick="seeMatch2()"> </div>
     </div>
-    
+    -->
 
     <br>
-    
+    <!--
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -112,7 +121,7 @@
             let list = [];
             for (var i in docSnapshots) {
               for (var j in docSnapshots[i].data().matchEmails) {
-                if (docSnapshots[i].data().matchEmails[j] == ("jerryjiao@berkeley.edu")) {
+                if (docSnapshots[i].data().matchEmails[j] == (sessionStorage.email))) {
                   console.log(docSnapshots[i].data().name);
                   list.push({email: docSnapshots[i].data().email, name: docSnapshots[i].data().name, picture: docSnapshots[i].data().picture, tweet: docSnapshots[i].data().tweet});
                 }
@@ -138,6 +147,6 @@
      $(window).load(function() {
      
   });
-</script>
-</body>
+</script> -->
+</body> 
 </html>

@@ -140,9 +140,6 @@ div.e {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
   }
-div.matchTitle {
-
-}
 div.item {
     vertical-align: top;
     display: inline-block;
@@ -160,46 +157,6 @@ div.item {
 .g-signin2 > div{
 	margin: 0 auto;
 }
-.triangle {
-	position: relative;
-	background-color:#FFE8A8;
-	text-align: left;
-}
-.triangle:before,
-.triangle:after {
-	content: '';
-	position: absolute;
-	background-color: inherit;
-}
-.triangle,
-.triangle:before,
-.triangle:after {
-	width:  2em;
-	height: 2em;
-	border-top-right-radius: 30%;
-}
-
-.triangle {
-	transform: rotate(30deg) skewX(-30deg) scale(1,.866);
-}
-.triangle:before {
-	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
-}
-.triangle:after {
-	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
-}
-
-@keyframes shadow-pulse
-{
-     0% {
-          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
-     }
-     100% {
-          box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
-     }
-}
-
-
 .button {
 	background-color: #FDCA40;
 	border: none;
@@ -489,6 +446,18 @@ div.c h2 {
 	padding-right: 300px;
 	font-weight: Bold;
 }
+div.c h3 {
+	color:#FFFFFF ;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1250px;
+}
+div.c h4 {
+	color:#FFFFFF ;
+	margin-top: 154px;
+	text-align: center;
+}
 
 /* faq-style */
 
@@ -638,3 +607,5 @@ div.e .button {
 	a { color: white; }
 
 	nav ul {list-style: none;}
+
+
