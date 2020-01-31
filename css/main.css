@@ -103,7 +103,9 @@ div.e {
 	text-align: center;
 }
 .g-signin2{
-	width: 100%;
+	/* width: 100%; */
+	width: 20vw;
+  /* height: 20vw; */
 }
 .g-signin2 > div{
 	margin: 0 auto;
