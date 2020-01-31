@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="google-signin-client_id" content="287779324897-bhjpqlec48lt942qe0qsu5f5st023rj5.apps.googleusercontent.com">
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
 
@@ -21,49 +20,11 @@
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<a class="navbar-brand" href="./homepage.html">
-		<ul class="navbar-nav mr-4">
-		<li class="nav-item">
-			<div class="start">
-				<button class="button4" id="demo" onclick="window.location.href = 'https://nehana.github.io/login.html';"></button>
-				<script>
-				var countDownDate = new Date("Feb 31, 2020 00:00:00").getTime();
-				var x = setInterval(function() {
-				var now = new Date().getTime();
-				var distance = countDownDate - now;
-				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-				if (days < 10) {
-					days = "0" + days;
-				}
-				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-				if (hours < 10) {
-					hours = "0" + hours;
-				}
-				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-				if (minutes < 10) {
-					minutes = "0" + minutes;
-				}
-				var seconds = Math.floor((distance % (1000 * 60)) / (1000));
-				if (seconds < 10) {
-					seconds = "0" + seconds;
-				}
-				document.getElementById("demo").innerHTML = days + " : " + hours + " : "
-				+ minutes + " : " + seconds;
-				if (distance < 0) {
-					clearInterval(x);
-					document.getElementById("demo").innerHTML = "Happy Valentine's Day!!";
-				}
-				}, 1000);
-				</script>
-			</div>
-		</li>
-	</ul>
-	</a>
+
 		<div class="collapse navbar-collapse " id="navbarSupportedContent">
 			<ul class="navbar-nav mr-4">
 					<li class="nav-item">
 						<a class="nav-link" href="./about2.html">ABOUT</a>
-
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="./team.html">TEAM</a>
@@ -74,30 +35,43 @@
 					<li class="nav-item">
 
 					<li class="nav-item">
-							<a class="nav-link" href="./login.html">
-
-
-								LOGIN
-
-								<a href="#" onclick="signOut();">Sign out</a>
-								<script>
-	  							function signOut() {
-	    							var auth2 = gapi.auth2.getAuthInstance();
-	    							auth2.signOut().then(function () {
-	      							console.log('User signed out.');
-	    							});
-	  							}
-								</script>
-
-							</a>
-
-
-
-
-
-
-
-
+							<a class="nav-link" href="./login.html">LOGIN</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link">
+					<div class="start">
+						<button class="button4" id="demo" onclick="window.location.href = 'https://nehana.github.io/login.html';"></button>
+						<script>
+						var countDownDate = new Date("Feb 31, 2020 00:00:00").getTime();
+						var x = setInterval(function() {
+						var now = new Date().getTime();
+						var distance = countDownDate - now;
+						var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+						if (days < 10) {
+							days = "0" + days;
+						}
+						var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+						if (hours < 10) {
+							hours = "0" + hours;
+						}
+						var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+						if (minutes < 10) {
+							minutes = "0" + minutes;
+						}
+						var seconds = Math.floor((distance % (1000 * 60)) / (1000));
+						if (seconds < 10) {
+							seconds = "0" + seconds;
+						}
+						document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+						+ minutes + " : " + seconds;
+						if (distance < 0) {
+							clearInterval(x);
+							document.getElementById("demo").innerHTML = "Happy Valentine's Day!!";
+						}
+						}, 1000);
+						</script>
+					</div>
+					</a>
 				</li>
 			</ul>
 
@@ -106,13 +80,7 @@
 
 	<div class="special-login">
 		<h1> Login </h1>
-		<!-- <h2> CAL ACCOUNT </h2> -->
-		<!-- <div class="square"></div> -->
-    <div class="square">
-        <div class="special-login">
-            <h2> CAL ACCOUNT </h2>
-        </div>
-    </div>
+		<h2> CAL ACCOUNT </h2>
 	</div>
 
 	<style>
@@ -140,31 +108,71 @@
 	</style>
 
 	<style>
-    .square {
-    position: relative;
-    width: 40%;
-    z-index: -1;
-    border-radius: 25px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:-100px;
-    background-color: #FFBA08;
-  }
-
-  .square:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-  }
-
-  .content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
+	.square {
+	border-radius: 25px;
+  height: 250px;
+  width: 500px;
+  background-color: #FFBA08;
+	position:absolute;
+  top:50%;
+  left:50%;
+  margin-top:-100px;
+  margin-left:-240px;
+	z-index: -1;
+	}
 </style>
 
+<style>
+.center1 {
+  display: block;
+  margin-left: 38%;
+  margin-right: 62%;
+	margin-top: -75px;
+  /* width: 50%; */
+}
+</style>
+
+
+<style>
+
+.button2 {
+	background-color: #FF6978;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+	color: white;
+	padding: 15px 32px;
+	text-align: right;
+	font-size: 20px;
+	font-family: "Work Sans";
+	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+  width: 400px;
+  }
+
+	.button3 {
+		background-color: #FFFFFF;
+		border: none;
+		border-radius: 10px;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		font-size: 20px;
+		font-family: "Work Sans";
+		height: 100px;
+	  width: 100px;
+		margin-left: 35%;
+	  margin-right: 65%;
+		margin-top: -100px;
+	  }
+
+</style>
+
+
+<div class="square"></div>
 
    	<div class="homepage">
 		<div class="g-signin2" data-onsuccess="onSignIn" -theme="light" data-width="300" data-height="50"
