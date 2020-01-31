@@ -79,12 +79,10 @@
 		</div>
 		</nav>
 
-<div class="container">
 	<div class="special-login">
 		<h1> Login </h1>
 		<h2> CAL ACCOUNT </h2>
 	</div>
-</div>
 
 	<style>
 	.special-login {
@@ -179,7 +177,7 @@
 
    	<div class="homepage">
 		<div class="g-signin2" data-onsuccess="onSignIn" -theme="light" data-width="300" data-height="50"
-			data-longtitle="true"></div>
+		data-longtitle="true"></div>
 		<script>
 			signedIn = true;
 			function onSignIn(googleUser) {
@@ -188,8 +186,7 @@
 				console.log('Name: ' + profile.getName());
 				console.log('Image URL: ' + profile.getImageUrl());
 				console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-				console.log(profile.getEmail());
-				sessionStorage.email = profile.getEmail();
+				sessionStorage.name = profile.getName();
 				window.location.replace("https://nehana.github.io/welcome.html");
 			}
 			function renderButton() {

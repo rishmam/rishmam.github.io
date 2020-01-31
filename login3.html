@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="google-signin-client_id" content="287779324897-bhjpqlec48lt942qe0qsu5f5st023rj5.apps.googleusercontent.com">
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
 
@@ -21,11 +21,49 @@
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
+		<a class="navbar-brand" href="./homepage.html">
+		<ul class="navbar-nav mr-4">
+		<li class="nav-item">
+			<div class="start">
+				<button class="button4" id="demo" onclick="window.location.href = 'https://nehana.github.io/login.html';"></button>
+				<script>
+				var countDownDate = new Date("Feb 31, 2020 00:00:00").getTime();
+				var x = setInterval(function() {
+				var now = new Date().getTime();
+				var distance = countDownDate - now;
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				if (days < 10) {
+					days = "0" + days;
+				}
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				if (hours < 10) {
+					hours = "0" + hours;
+				}
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				if (minutes < 10) {
+					minutes = "0" + minutes;
+				}
+				var seconds = Math.floor((distance % (1000 * 60)) / (1000));
+				if (seconds < 10) {
+					seconds = "0" + seconds;
+				}
+				document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+				+ minutes + " : " + seconds;
+				if (distance < 0) {
+					clearInterval(x);
+					document.getElementById("demo").innerHTML = "Happy Valentine's Day!!";
+				}
+				}, 1000);
+				</script>
+			</div>
+		</li>
+	</ul>
+	</a>
 		<div class="collapse navbar-collapse " id="navbarSupportedContent">
 			<ul class="navbar-nav mr-4">
 					<li class="nav-item">
 						<a class="nav-link" href="./about2.html">ABOUT</a>
+
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="./team.html">TEAM</a>
@@ -36,55 +74,41 @@
 					<li class="nav-item">
 
 					<li class="nav-item">
-							<a class="nav-link" href="./login.html">LOGIN</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link">
-					<div class="start">
-						<button class="button4" id="demo" onclick="window.location.href = 'https://nehana.github.io/login.html';"></button>
-						<script>
-						var countDownDate = new Date("Feb 31, 2020 00:00:00").getTime();
-						var x = setInterval(function() {
-						var now = new Date().getTime();
-						var distance = countDownDate - now;
-						var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-						if (days < 10) {
-							days = "0" + days;
-						}
-						var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-						if (hours < 10) {
-							hours = "0" + hours;
-						}
-						var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-						if (minutes < 10) {
-							minutes = "0" + minutes;
-						}
-						var seconds = Math.floor((distance % (1000 * 60)) / (1000));
-						if (seconds < 10) {
-							seconds = "0" + seconds;
-						}
-						document.getElementById("demo").innerHTML = days + " : " + hours + " : "
-						+ minutes + " : " + seconds;
-						if (distance < 0) {
-							clearInterval(x);
-							document.getElementById("demo").innerHTML = "Happy Valentine's Day!!";
-						}
-						}, 1000);
-						</script>
-					</div>
-					</a>
+							<a class="nav-link" href="./login.html">
+
+
+								LOGIN
+
+								<a href="#" onclick="signOut();">Sign out</a>
+								<script>
+	  							function signOut() {
+	    							var auth2 = gapi.auth2.getAuthInstance();
+	    							auth2.signOut().then(function () {
+	      							console.log('User signed out.');
+	    							});
+	  							}
+								</script>
+
+							</a>
+
+
+
+
+
+
+
+
 				</li>
 			</ul>
 
 		</div>
 		</nav>
 
-<div class="container">
 	<div class="special-login">
 		<h1> Login </h1>
 		<h2> CAL ACCOUNT </h2>
+		<div class="square"></div>
 	</div>
-</div>
 
 	<style>
 	.special-login {
@@ -113,15 +137,29 @@
 	<style>
 	.square {
 	border-radius: 25px;
-  height: 250px;
-  width: 500px;
+  /* height: 250px; */
+  /* width: 500px; */
   background-color: #FFBA08;
-	position:absolute;
+	/* position:absolute; */
+	position: relative;
   top:50%;
   left:50%;
-  margin-top:-100px;
-  margin-left:-240px;
+  /* margin-top:-120px; */
+	margin-top:-8vw;
+	/* margin-left: auto; */
+	/* margin-right: auto; */
+  /* margin-left:-210px; */
+	margin-left: -15vw;
 	z-index: -1;
+	width: 30vw;
+  height: 20vw;
+	/* width: 50%; */
+	}
+
+	.square :after {
+	content: "";
+  display: block;
+  padding-bottom: 100%;
 	}
 </style>
 
@@ -175,11 +213,11 @@
 </style>
 
 
-<div class="square"></div>
+<!-- <div class="square"></div> -->
 
    	<div class="homepage">
 		<div class="g-signin2" data-onsuccess="onSignIn" -theme="light" data-width="300" data-height="50"
-			data-longtitle="true"></div>
+		data-longtitle="true"></div>
 		<script>
 			signedIn = true;
 			function onSignIn(googleUser) {
@@ -188,8 +226,7 @@
 				console.log('Name: ' + profile.getName());
 				console.log('Image URL: ' + profile.getImageUrl());
 				console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-				console.log(profile.getEmail());
-				sessionStorage.email = profile.getEmail();
+				sessionStorage.name = profile.getName();
 				window.location.replace("https://nehana.github.io/welcome.html");
 			}
 			function renderButton() {

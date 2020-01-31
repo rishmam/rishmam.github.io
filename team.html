@@ -17,32 +17,65 @@
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
+		<a class="navbar-brand" href="./homepage.html">
+		<ul class="navbar-nav mr-4">
+		<li class="nav-item">
+			<div class="start">
+				<button class="button4" id="demo" onclick="window.location.href = 'https://nehana.github.io/login.html';"></button>
+				<script>
+				var countDownDate = new Date("Feb 31, 2020 00:00:00").getTime();
+				var x = setInterval(function() {
+				var now = new Date().getTime();
+				var distance = countDownDate - now;
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				if (days < 10) {
+					days = "0" + days;
+				}
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				if (hours < 10) {
+					hours = "0" + hours;
+				}
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				if (minutes < 10) {
+					minutes = "0" + minutes;
+				}
+				var seconds = Math.floor((distance % (1000 * 60)) / (1000));
+				if (seconds < 10) {
+					seconds = "0" + seconds;
+				}
+				document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+				+ minutes + " : " + seconds;
+				if (distance < 0) {
+					clearInterval(x);
+					document.getElementById("demo").innerHTML = "Happy Valentine's Day!!";
+				}
+				}, 1000);
+				</script>
+			</div>
+		</li>
+	</ul>
+	</a>
 		<div class="collapse navbar-collapse " id="navbarSupportedContent">
 			<ul class="navbar-nav mr-4">
 					<li class="nav-item">
 						<a class="nav-link" href="./about2.html">ABOUT</a>
-						<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
+
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="./team.html">TEAM</a>
-						<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="./faq2.html">FAQ</a>
-					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 					</li>
 					<li class="nav-item">
 
 					<li class="nav-item">
 							<a class="nav-link" href="./login.html">LOGIN</a>
-					<!-- <a class="nav-link " data-value="about" href="#">faq</a> -->
 				</li>
 			</ul>
 
 		</div>
 		</nav>
-
 <!-- Team section -->
 <div class="team" id="team">
 	<div class="container">
@@ -50,13 +83,11 @@
 		 <h4 class="text-center"> 👩🏻 👩🏽 👩🏾 </h4>
 		<div class="row">
 			<div class="col-lg-4 col-md-4 col-sm-12 item">
-				<!-- <img src="images/neha_photo_resized.png" class="img-fluid" alt="team"> -->
         <h3> Angela Lee </h3>
 				<h3> UI/UX </h3>
 				 <a href="https://www.linkedin.com/in/angelapl/">
 <img alt="LinkedIn" src="images/new_white_linkedin_logo.png" class="img-fluid">
 </a>
-				<!-- <span class="text-white">Neha Nagabothu</span> -->
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12 item">
         <h3> Neha Nagabothu</h3>
@@ -66,14 +97,11 @@
 </a>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12 item">
-				<!-- <img src="images/angela_photo_resized.jpg" class="img-fluid" alt="team"> -->
         <h3> Rishma Murugan </h3>
 				<h3> Back-end </h3>
 				 <a href="https://www.linkedin.com/in/rishma-murugan/">
 <img alt="LinkedIn" src="images/new_white_linkedin_logo.png" class="img-fluid">
 </a>
-				 <!-- <img src="images/linkedin_logo.png" class="img-fluid" alt="team"> -->
-				<!-- <span class="text-white">Angela Lee</span> -->
 			</div>
 		</div>
 	</div>
