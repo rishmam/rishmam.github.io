@@ -93,10 +93,7 @@
 			function signOut() {
 				gapi.auth2.getAuthInstance().signOut().then(function() {
 					console.log('user signed out');
-					var element = document.getElementById("login");
-					element.innerHTML = "LOG IN";
-					element.onclick="location.href = 'www.nehana.github.io/login2.html";
-					sessionStorage.clear();
+					//test
 					window.location.replace("https://nehana.github.io/welcome.html");
 					return;
 				})
