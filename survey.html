@@ -114,9 +114,10 @@
         const getUser = async () => {
             const userEmail = sessionStorage.email;
             if(sessionStorage.email == undefined 
-              || sessionStorage.email.substring(sessionStorage.length - 12, sessionStorage.length -1) != "berkeley.edu"){
+              || sessionStorage.email.substring(sessionStorage.email.length - 12, sessionStorage.email.length -1) != "berkeley.edu"){
               console.log("Not valid login");
-              window.location.replace("http://nehana.github.io/invalidLogin.html");
+              console.log(sessionStorage.email.substring(sessionStorage.email.length - 12, sessionStorage.email.length - 1) != "berkeley.edu");
+              window.location.replace("http://localhost:5500/invalidLogin.html");
               var element = document.getElementById("typeform-full");
               element.parentNode.removeChild(element);
               return;

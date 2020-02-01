@@ -9,7 +9,6 @@
   <!-- add bootstrap css file -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
-  
 </head>
 
 <body>
@@ -54,6 +53,7 @@
 	<button class="button" onclick="window.location.href = 'https://nehana.github.io/login.html';">Log in</button>
 	<script>
 		console.log(sessionStorage.email);
+		console.log(sessionStorage.email.substring(sessionStorage.email.length - 12, sessionStorage.email.length -1));
 	</script>
   </div>
 </body> 
