@@ -1,10 +1,11 @@
+import firebaseConfig from "config.js";
 const admin = require('./node_modules/firebase-admin');
 const serviceAccount = require("./serviceAccountKey.json");
 const data = require("./results.json");
 const collectionKey = "matches"; //name of the collection
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://bearp-493dc.firebaseio.com"
+  databaseURL: firebaseConfig.databaseURL
 });
 const firestore = admin.firestore();
 const settings = {timestampsInSnapshots: true};
