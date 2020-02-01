@@ -14,7 +14,7 @@
 </head>
 <body onLoad="checkAuth();">
 	<!-- navbar -->
-		<nav class="navbar navbar-expand-lg fixed-top ">
+	<nav class="navbar navbar-expand-lg fixed-top ">
 		<a class="navbar-brand" href="./homepage.html">
 			<img src="/images/start_logo.png" width="40" height="40" alt="">
 		</a>
@@ -59,7 +59,7 @@
 		</li>
 	</ul>
 		</a>
-
+	
 		<div class="collapse navbar-collapse " id="navbarSupportedContent">
 			<ul class="navbar-nav mr-4">
 					<li class="nav-item">
@@ -72,30 +72,33 @@
 						<a class="nav-link" href="./faq2.html">FAQ</a>
 					</li>
 					<li class="nav-item">
-
-					<li class="nav-item">
 						<a class="nav-link" id="login" href="./login.html">LOGIN</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="logout" onclick="signOut()" href="#">LOG OUT</a>
 					</li>
 			</ul>
 			<script>
 				const checkAuth = async() => {
 					console.log(sessionStorage.email);
 					if(sessionStorage.email == undefined) {
-						var element = document.getElementById("logout");
-						element.parentNode.removeChild(element);
+						var element = document.getElementById("login");
+						element.innerHTML = "LOGIN";
+						element.onclick="location.href = 'www.nehana.github.io/login2.html";
 						return;
 					} else {
+						console.log("in func");
 						var element = document.getElementById("login");
-						element.parentNode.removeChild(element);
+						element.innerHTML = "LOG OUT";
+						element.onclick="signOut()";
 						return;
 					}
 				}
 				function signOut() {
 					gapi.auth2.getAuthInstance().signOut().then(function() {
-						console.log('user signed out')
+						console.log('user signed out');
+						var element = document.getElementById("login");
+						element.innerHTML = "LOG IN";
+						element.onclick="location.href = 'www.nehana.github.io/login2.html";
+						sessionStorage.clear();
+						return;
 					})
 				}
 			</script>
