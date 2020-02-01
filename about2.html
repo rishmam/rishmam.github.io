@@ -80,19 +80,19 @@
 				<script>
 					const checkAuth = async() => {
 						console.log(sessionStorage.email);
-						if(sessionStorage.email == undefined) {
+						/**if(sessionStorage.email == undefined) {
 							console.log("user not logged in");
 							var element = document.getElementById("login");
 							element.innerHTML = "LOGIN";
 							element.onclick="location.href = 'www.nehana.github.io/login.html";
 							return;
-						} else {
+						} else { **/
 							console.log("user logged in");
 							var element = document.getElementById("login");
 							element.innerHTML = "LOG OUT";
 							element.onclick="location.href = 'www.nehana.github.io/logoutConfirmation.html";
 							return;
-						}
+						//}
 					}
 					function signOut() {
 						gapi.auth2.getAuthInstance().signOut().then(function() {
