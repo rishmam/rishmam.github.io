@@ -118,7 +118,13 @@
 			}
 			function signOut() {
 				gapi.auth2.getAuthInstance().signOut().then(function() {
-					console.log('user signed out through yellow box')
+					console.log('user signed out');
+					var element = document.getElementById("login");
+					element.innerHTML = "LOGIN";
+					element.setAttribute('href', './login.html');
+					sessionStorage.clear();
+					window.location.replace("https://nehana.github.io/logoutConfirmation.html");
+					return;
 				})
 			}
 		</script>
