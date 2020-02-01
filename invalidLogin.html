@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-signin-client_id" content="287779324897-bhjpqlec48lt942qe0qsu5f5st023rj5.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
 
   <title>Error</title>
   <!-- add bootstrap css file -->
@@ -106,9 +108,21 @@
   <div class="c">
     <h1>Hmm something went wrong!</h1>
     <h4>Try logging in again with your Berkeley email. </h4>
-    <br>
-    <br> <br><br>
-	<button class="button" onclick="window.location.href = 'https://nehana.github.io/login.html';">Log in</button>
+	<br> 
+	<br>
+	<div class="g-signin2" data-onsuccess="onSignIn"></div>
+	<script>
+			function onSignIn(googleUser) {
+				var profile = googleUser.getBasicProfile();
+				element.innerHTML = "LOG OUT";
+				element.onclick="signOut()";
+			}
+			function signOut() {
+				gapi.auth2.getAuthInstance().signOut().then(function() {
+					console.log('user signed out through yellow box')
+				})
+			}
+		</script>
 	<script>
 		console.log(sessionStorage.email);
 		console.log(sessionStorage.email.substring(sessionStorage.email.length - 12, sessionStorage.email.length));
