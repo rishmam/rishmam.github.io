@@ -79,13 +79,12 @@
 						if(sessionStorage.email == undefined) {
 							var element = document.getElementById("login");
 							element.innerHTML = "LOGIN";
-							element.onclick="location.href = 'www.nehana.github.io/login2.html";
+							element.onclick="location.href = 'www.nehana.github.io/login.html";
 							return;
 						} else {
-							console.log("in func");
 							var element = document.getElementById("login");
 							element.innerHTML = "LOG OUT";
-							element.onclick="signOut()";
+							element.onclick="location.href = 'www.nehana.github.io/logoutConfirmation.html";
 							return;
 						}
 					}
@@ -93,8 +92,8 @@
 						gapi.auth2.getAuthInstance().signOut().then(function() {
 							console.log('user signed out');
 							var element = document.getElementById("login");
-							element.innerHTML = "LOG IN";
-							element.onclick="location.href = 'www.nehana.github.io/login2.html";
+							element.innerHTML = "LOGIN";
+							element.onclick="location.href = 'www.nehana.github.io/login.html";
 							sessionStorage.clear();
 							return;
 						})
