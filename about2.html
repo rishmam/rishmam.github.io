@@ -80,14 +80,14 @@
 							var element = document.getElementById("login");
 							element.innerHTML = "LOGIN";
 							element.setAttribute('href', './login.html');
-							//element.onclick="location.href = 'www.nehana.github.io/login.html";
 							return;
 						} else { 
 							console.log("user logged in");
 							var element = document.getElementById("login");
 							element.innerHTML = "LOG OUT";
-							element.setAttribute('href', './logoutConfirmation.html');
-							//element.onclick="location.href = 'www.nehana.github.io/logoutConfirmation.html";
+							//element.setAttribute('href', './logoutConfirmation.html');
+							element.setAttribute('onClick', 'signOut(); return false;');
+							element.setAttribute('href', '#');
 							return;
 						}
 					}
