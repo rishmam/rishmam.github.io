@@ -92,14 +92,19 @@
 					}
 				}
 				function signOut() {
-					gapi.auth2.getAuthInstance().signOut().then(function() {
+					var id_token = googleUser.getAuthResponse().id_token;
+					var auth2 = gapi.auth2.getAuthInstance();
+					auth2.disconnect();
+					sessionStorage.clear();
+					console.log(sessionStorage.email);
+					/**gapi.auth2.getAuthInstance().signOut().then(function() {
 						console.log('user signed out');
 						var element = document.getElementById("login");
 						element.innerHTML = "LOG IN";
 						element.onclick="location.href = 'www.nehana.github.io/login2.html";
 						sessionStorage.clear();
 						return;
-					})
+					}) **/
 				}
 			</script>
 		</div>
