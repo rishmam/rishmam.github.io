@@ -19,44 +19,43 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="./homepage.html">
-  <ul class="navbar-nav mr-4">
-  <li class="nav-item">
-    <div class="start">
-      <button class="button4" id="demo" onclick="window.location.href = 'https://nehana.github.io/login.html';"></button>
-      <script>
-      var countDownDate = new Date("Feb 10, 2020 23:59:59").getTime();
-      var x = setInterval(function() {
-      var now = new Date().getTime();
-      var distance = countDownDate - now;
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      if (days < 10) {
-        days = "0" + days;
-      }
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      if (hours < 10) {
-        hours = "0" + hours;
-      }
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      if (minutes < 10) {
-        minutes = "0" + minutes;
-      }
-      var seconds = Math.floor((distance % (1000 * 60)) / (1000));
-      if (seconds < 10) {
-        seconds = "0" + seconds;
-      }
-      document.getElementById("demo").innerHTML = days + " : " + hours + " : "
-      + minutes + " : " + seconds;
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "Happy Valentine's Day!!";
-      }
-      }, 1000);
-      </script>
-    </div>
-  </li>
-</ul>
+    <ul class="navbar-nav mr-4">
+      <li class="nav-item">
+        <div class="start">
+          <button class="button4" id="demo" onclick="window.location.href = 'https://nehana.github.io/login.html';"></button>
+          <script>
+          var countDownDate = new Date("Feb 10, 2020 23:59:59").getTime();
+          var x = setInterval(function() {
+          var now = new Date().getTime();
+          var distance = countDownDate - now;
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          if (days < 10) {
+            days = "0" + days;
+          }
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          if (hours < 10) {
+            hours = "0" + hours;
+          }
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          if (minutes < 10) {
+            minutes = "0" + minutes;
+          }
+          var seconds = Math.floor((distance % (1000 * 60)) / (1000));
+          if (seconds < 10) {
+            seconds = "0" + seconds;
+          }
+          document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+          + minutes + " : " + seconds;
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "Happy Valentine's Day!!";
+          }
+          }, 1000);
+          </script>
+        </div>
+      </li>
+    </ul>
   </a>
-
   <div class="collapse navbar-collapse " id="navbarSupportedContent">
     <ul class="navbar-nav mr-4">
         <li class="nav-item">
@@ -73,17 +72,19 @@
         </li>
     </ul>
     <script>
-      const authVerification = async() => {
+      const checkAuth = async() => {
         console.log(sessionStorage.email);
         if(sessionStorage.email == undefined) {
+          console.log("user not logged in");
           var element = document.getElementById("login");
           element.innerHTML = "LOGIN";
-          element.onclick="location.href = 'www.nehana.github.io/login.html";
+          element.setAttribute('href', './login.html');
           return;
-        } else {
+        } else { 
+          console.log("user logged in");
           var element = document.getElementById("login");
           element.innerHTML = "LOG OUT";
-          element.onclick="location.href = 'www.nehana.github.io/logoutConfirmation.html";
+          element.setAttribute('href', './logoutConfirmation.html');
           return;
         }
       }
@@ -92,8 +93,9 @@
           console.log('user signed out');
           var element = document.getElementById("login");
           element.innerHTML = "LOGIN";
-          element.onclick="location.href = 'www.nehana.github.io/login.html";
+          element.setAttribute('href', './login.html');
           sessionStorage.clear();
+          window.location.replace("https://nehana.github.io/logoutConfirmation.html");
           return;
         })
       }

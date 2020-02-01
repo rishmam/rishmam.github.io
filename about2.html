@@ -3,11 +3,12 @@
 	<head>
 		<title>BearPairs</title>
 		<meta name="google-signin-client_id" content="287779324897-bhjpqlec48lt942qe0qsu5f5st023rj5.apps.googleusercontent.com">
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 		<!-- add bootstrap css file -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="shortcut icon" href="">
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
 		
 	</head>
 	<body onload="checkAuth()">
@@ -85,9 +86,7 @@
 							console.log("user logged in");
 							var element = document.getElementById("login");
 							element.innerHTML = "LOG OUT";
-							//element.setAttribute('href', './logoutConfirmation.html');
-							element.setAttribute('onClick', 'signOut(); return false;');
-							element.setAttribute('href', '#');
+							element.setAttribute('href', './logoutConfirmation.html');
 							return;
 						}
 					}
