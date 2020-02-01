@@ -105,12 +105,33 @@
 	</div>
 </nav>
 
-   	<div class="description ">
+   	<div class="loginFailure ">
 		<div id="login_button" class="g-signin2" data-onsuccess="onSignIn"></div>
 		<h1>Hmm something went wrong. </h1>
-		<h1>Try again with your Berkeley email.</h1>
+		<h2>Try again with your Berkeley email.</h2>
 		<button class="button" onclick="signOut()">Sign out</button>
-		
+		<style>
+			.loginFailure {
+				color:#FFFFFF ;
+				margin-top: 13%;
+				text-align: center;
+			}
+			.loginFailure h1 {
+				color:#FFFFFF;
+				margin-top: auto;
+				text-align: center;
+				font-size: 60px;
+				padding-top: 1.5em;
+			}
+			.loginFailure h2 {
+				color:#FFFFFF;
+				margin-top: auto;
+				margin-bottom:100px;
+				text-align: center;
+				font-size: 40px;
+				padding-top: 1.5em;
+			}
+		</style>
 		<script>
 			document.getElementById("login_button").style.display = "none";
 			function onSignIn(googleUser) {
