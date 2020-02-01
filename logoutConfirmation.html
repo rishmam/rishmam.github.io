@@ -105,10 +105,38 @@
 	</div>
 </nav>
 
-   	<div class="description ">
-		<div class="g-signin2" data-onsuccess="onSignIn"></div>
+   	<div class="logoutConfirmation">
+		<div id="login_button" class="g-signin2" data-onsuccess="onSignIn"></div>
 		<h1>Are you sure you want to log out?</h1>
-		<button onclick="signOut()">Sign out (testing)</button>
+		<button class="button" onclick="signOut()">Log out</button>
+		<style>
+			.logoutConfirmation {
+				color:#FFFFFF ;
+				margin-top: 15%;
+				text-align: center;
+			}
+			.logoutConfirmation h1 {
+				color:#FFFFFF;
+				margin-top: auto;
+				margin-bottom: 5%;
+				text-align: center;
+				font-size: 40px;
+				padding-top: 1.5em;
+			}
+			.logoutConfirmation h2 {
+				color:#FFFFFF;
+				margin-bottom: 20px;
+				text-align: center;
+				font-size: 25px;
+			}
+			
+			.logoutConfirmation h3 {
+				color:#FFFFFF;
+				margin-bottom: 30px;
+				text-align: center;
+				font-size: 20px;
+			}
+		</style>		
 		<script>
 			document.getElementById("login_button").style.display = "none";
 			function onSignIn(googleUser) {
