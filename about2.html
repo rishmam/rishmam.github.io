@@ -96,7 +96,7 @@
 							console.log('user signed out');
 							var element = document.getElementById("login");
 							element.innerHTML = "LOGIN";
-							element.onclick="location.href = 'www.nehana.github.io/login.html";
+							element.setAttribute('href', './login.html');
 							sessionStorage.clear();
 							window.location.replace("https://nehana.github.io/logoutConfirmation.html");
 							return;
