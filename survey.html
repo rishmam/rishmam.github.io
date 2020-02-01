@@ -113,11 +113,17 @@
 
         const getUser = async () => {
             const userEmail = sessionStorage.email;
-            if(sessionStorage.email == undefined 
-              || sessionStorage.email.substring(sessionStorage.email.length - 12, sessionStorage.email.length -1) != "berkeley.edu"){
-              console.log("Not valid login");
+            if (sessionStorage.email == undefined) {
+              console.log(sessionStorage.email + " is undefined");
+              //window.location.replace("http://nehana.github.io/invalidLogin.html");
+              var element = document.getElementById("typeform-full");
+              element.parentNode.removeChild(element);
+              return;
+            }
+            if(sessionStorage.email.substring(sessionStorage.email.length - 12, sessionStorage.email.length -1) != "berkeley.edu"){
+              console.log(sessionStorage.email + " Not valid login");
               console.log(sessionStorage.email.substring(sessionStorage.email.length - 12, sessionStorage.email.length - 1) != "berkeley.edu");
-              window.location.replace("http://nehana.github.io/invalidLogin.html");
+              //window.location.replace("http://nehana.github.io/invalidLogin.html");
               var element = document.getElementById("typeform-full");
               element.parentNode.removeChild(element);
               return;
