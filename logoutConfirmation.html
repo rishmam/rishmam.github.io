@@ -12,8 +12,8 @@
 	  
 </head>
 <body onload="checkAuth()">
-<!-- navbar -->
-<nav class="navbar navbar-expand-lg fixed-top ">
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top ">
 	<a class="navbar-brand" href="./homepage.html">
 		<img src="/images/start_logo.png" width="40" height="40" alt="">
 	</a>
@@ -104,10 +104,9 @@
 		</script>
 	</div>
 </nav>
-
-   	<div class="c">
-		<h1>Are you sure you want to log out?</h1>
-		<button class="button" onclick="signOut()">Sign out (testing)</button>
+   	<div class="description ">
+		<div class="g-signin2" data-onsuccess="onSignIn"></div>
+		<button onclick="signOut()">Sign out (testing)</button>
 		<script>
 			function onSignIn(googleUser) {
 				var profile = googleUser.getBasicProfile();
