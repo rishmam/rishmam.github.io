@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="css/main.css">
 	  
 </head>
-<body>
+<body onload="checkAuth()">
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg fixed-top ">
 	<a class="navbar-brand" href="./homepage.html">
@@ -71,30 +71,33 @@
 					<a class="nav-link" href="./faq2.html">FAQ</a>
 				</li>
 				<li class="nav-item">
-
-				<li class="nav-item">
 					<a class="nav-link" id="login" href="./login.html">LOGIN</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" id="logout" onclick="signOut()" href="#">LOG OUT</a>
 				</li>
 		</ul>
 		<script>
 			const checkAuth = async() => {
 				console.log(sessionStorage.email);
 				if(sessionStorage.email == undefined) {
-					var element = document.getElementById("logout");
-					element.parentNode.removeChild(element);
+					var element = document.getElementById("login");
+					element.innerHTML = "LOGIN";
+					element.onclick="onSignIn";
 					return;
 				} else {
+					console.log("in func");
 					var element = document.getElementById("login");
-					element.parentNode.removeChild(element);
+					element.innerHTML = "LOG OUT";
+					element.onclick="signOut();";
 					return;
 				}
 			}
 			function signOut() {
 				gapi.auth2.getAuthInstance().signOut().then(function() {
-					console.log('user signed out')
+					console.log('user signed out');
+					sessionStorage.clear();
+					var element = document.getElementById("login");
+					element.innerHTML = "LOGIN";
+					element.onclick="location.href = 'www.nehana.github.io/login2.html';";
+					return;
 				})
 			}
 		</script>
@@ -111,6 +114,9 @@
 				console.log('Name: ' + profile.getName());
 				console.log('Image URL: ' + profile.getImageUrl());
 				console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+				var element = document.getElementById("login");
+				element.innerHTML = "LOG OUT";
+				element.onclick="signOut();";
 			}
 			function signOut() {
 				gapi.auth2.getAuthInstance().signOut().then(function() {
