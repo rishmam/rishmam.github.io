@@ -12,8 +12,8 @@
 	  
 </head>
 <body onload="checkAuth()">
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top ">
+ <!-- navbar -->
+ <nav class="navbar navbar-expand-lg fixed-top ">
 	<a class="navbar-brand" href="./homepage.html">
 		<img src="/images/start_logo.png" width="40" height="40" alt="">
 	</a>
@@ -97,15 +97,18 @@
 					element.innerHTML = "LOGIN";
 					element.setAttribute('href', './login.html');
 					sessionStorage.clear();
-					window.location.replace("https://nehana.github.io/welcome.html");
+					window.location.replace("https://nehana.github.io/logoutConfirmation.html");
 					return;
 				})
 			}
 		</script>
 	</div>
 </nav>
+
    	<div class="description ">
-		<button class="button" onclick="signOut()">Sign out PLZ</button>
+		<div class="g-signin2" data-onsuccess="onSignIn"></div>
+		<h1>Are you sure you want to log out?</h1>
+		<button onclick="signOut()">Sign out (testing)</button>
 		<script>
 			function onSignIn(googleUser) {
 				var profile = googleUser.getBasicProfile();
@@ -114,7 +117,13 @@
 			}
 			function signOut() {
 				gapi.auth2.getAuthInstance().signOut().then(function() {
-					console.log('user signed out through yellow box')
+					console.log('user signed out');
+					var element = document.getElementById("login");
+					element.innerHTML = "LOGIN";
+					element.setAttribute('href', './login.html');
+					sessionStorage.clear();
+					window.location.replace("https://nehana.github.io/index.html");
+					return;
 				})
 			}
 		</script>
@@ -127,3 +136,4 @@
 
 </body>
 </html>
+© 2020 GitHub, Inc.
