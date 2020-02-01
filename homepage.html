@@ -8,9 +8,9 @@
 		<link rel="shortcut icon" href="">
 
 	</head>
-	<body>
+	<body  onLoad="checkAuth();">
 		<!-- navbar -->
-			<nav class="navbar navbar-expand-lg fixed-top ">
+		<nav class="navbar navbar-expand-lg fixed-top ">
 			<a class="navbar-brand" href="./homepage.html">
 				<img src="/images/start_logo.png" width="40" height="40" alt="">
 			</a>
@@ -54,12 +54,12 @@
 				</div>
 			</li>
 		</ul>
-		</a>
+			</a>
+
 			<div class="collapse navbar-collapse " id="navbarSupportedContent">
 				<ul class="navbar-nav mr-4">
 						<li class="nav-item">
 							<a class="nav-link" href="./about2.html">ABOUT</a>
-
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="./team.html">TEAM</a>
@@ -70,12 +70,34 @@
 						<li class="nav-item">
 
 						<li class="nav-item">
-								<a class="nav-link" href="./login.html">LOGIN</a>
-					</li>
+							<a class="nav-link" id="login" href="./login.html">LOGIN</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="logout" onclick="signOut();" href="#">LOG OUT</a>
+						</li>
 				</ul>
-
+				<script>
+					const checkAuth = async() => {
+						console.log(sessionStorage.email);
+						if(sessionStorage.email == undefined) {
+							var element = document.getElementById("logout");
+            				element.parentNode.removeChild(element);
+							return;
+						} else {
+							var element = document.getElementById("login");
+            				element.parentNode.removeChild(element);
+							return;
+						}
+					}
+					function signOut() {
+						var auth2 = gapi.auth2.getAuthInstance();
+						auth2.signOut().then(function () {
+						console.log('User signed out.');
+						});
+					}
+				</script>
 			</div>
-			</nav>
+		</nav>
 		<div class="homepage">
 			<div class="center">
 				<h1> BearPairs </h1>
