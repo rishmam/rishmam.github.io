@@ -123,15 +123,9 @@
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script>
       // Initialize Firebase
-      var config = {
-          apiKey: "AIzaSyCvpEisytGcXdAqjyxrWiDrAvqy86Bi6Dk",
-          authDomain: "bearp-493dc.firebaseapp.com",
-          databaseURL: "https://bearp-493dc.firebaseio.com",
-          projectId: "bearp-493dc",
-          storageBucket: "bearp-493dc.appspot.com",
-          messagingSenderId: "714702346867"
-      }
-      firebase.initializeApp(config);
+      import {firebaseConfig} from "config.js";
+    
+      firebase.initializeApp(firebaseConfig);
     </script>
     <script>
       const matchLoad = async() => {
@@ -161,7 +155,7 @@
             let list = [];
             for (var i in docSnapshots) {
               for (var j in docSnapshots[i].data().matchEmails) {
-                if (docSnapshots[i].data().matchEmails[j] == ("jerryjiao@berkeley.edu")) {
+                if (docSnapshots[i].data().matchEmails[j] == (sessionStorage.email)) {
                   console.log(docSnapshots[i].data().name);
                   list.push({email: docSnapshots[i].data().email, name: docSnapshots[i].data().name, picture: docSnapshots[i].data().picture, tweet: docSnapshots[i].data().tweet});
                 }
