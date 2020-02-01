@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta name="google-signin-client_id" content="287779324897-bhjpqlec48lt942qe0qsu5f5st023rj5.apps.googleusercontent.com">
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		
+	<title>bearpairs</title>
+	 <!-- add bootstrap css file -->
+
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+	  
+</head>
+<body onload="checkAuth()">
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top ">
+	<a class="navbar-brand" href="./homepage.html">
+		<img src="/images/start_logo.png" width="40" height="40" alt="">
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<a class="navbar-brand" href="./homepage.html">
+	<ul class="navbar-nav mr-4">
+	<li class="nav-item">
+		<div class="start">
+			<button class="button4" id="demo" onclick="window.location.href = 'https://nehana.github.io/login.html';"></button>
+			<script>
+			var countDownDate = new Date(", 2020 23:59:59").getTime();
+			var x = setInterval(function() {
+			var now = new Date().getTime();
+			var distance = countDownDate - now;
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			if (days < 10) {
+				days = "0" + days;
+			}
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			if (hours < 10) {
+				hours = "0" + hours;
+			}
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			if (minutes < 10) {
+				minutes = "0" + minutes;
+			}
+			var seconds = Math.floor((distance % (1000 * 60)) / (1000));
+			if (seconds < 10) {
+				seconds = "0" + seconds;
+			}
+			document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+			+ minutes + " : " + seconds;
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("demo").innerHTML = "Happy Valentine's Day!!";
+			}
+			}, 1000);
+			</script>
+		</div>
+	</li>
+</ul>
+	</a>
+
+	<div class="collapse navbar-collapse " id="navbarSupportedContent">
+		<ul class="navbar-nav mr-4">
+				<li class="nav-item">
+					<a class="nav-link" href="./about2.html">ABOUT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./team.html">TEAM</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./faq2.html">FAQ</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="login" href="./login.html">LOGIN</a>
+				</li>
+		</ul>
+		<script>
+			const checkAuth = async() => {
+				console.log(sessionStorage.email);
+				if(sessionStorage.email == undefined) {
+					var element = document.getElementById("login");
+					element.innerHTML = "LOGIN";
+					element.onclick="location.href = 'www.nehana.github.io/login2.html";
+					return;
+				} else {
+					console.log("in func");
+					var element = document.getElementById("login");
+					element.innerHTML = "LOG OUT";
+					element.onclick="signOut()";
+					return;
+				}
+			}
+			function signOut() {
+				gapi.auth2.getAuthInstance().signOut().then(function() {
+					console.log('user signed out');
+					var element = document.getElementById("login");
+					element.innerHTML = "LOG IN";
+					element.onclick="location.href = 'www.nehana.github.io/login2.html";
+					sessionStorage.clear();
+					return;
+				})
+			}
+		</script>
+	</div>
+</nav>
+
+   	<div class="description ">
+		<div class="g-signin2" data-onsuccess="onSignIn"></div>
+		<h1>Hmm something went wrong!</h1>
+    	<h4>Try logging in again with your Berkeley email. </h4>
+		<button onclick="signOut()">Sign out (testing)</button>
+		<script>
+			function onSignIn(googleUser) {
+				var profile = googleUser.getBasicProfile();
+				element.innerHTML = "LOG OUT";
+				element.onclick="signOut()";
+			}
+			function signOut() {
+				gapi.auth2.getAuthInstance().signOut().then(function() {
+					console.log('user signed out through yellow box')
+				})
+			}
+		</script>
+   	</div>
+
+<!-- add Javasscript file from js file -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src='js/main.js'></script>
+
+</body>
+</html>
+© 2020 GitHub, Inc.
