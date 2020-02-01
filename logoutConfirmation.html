@@ -110,6 +110,7 @@
 		<h1>Are you sure you want to log out?</h1>
 		<button onclick="signOut()">Sign out (testing)</button>
 		<script>
+			document.getElementById("login_button").style.display = "none";
 			function onSignIn(googleUser) {
 				var profile = googleUser.getBasicProfile();
 				element.innerHTML = "LOG OUT";
