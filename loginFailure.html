@@ -111,7 +111,9 @@
 		<button onclick="signOut()">Sign out (testing)</button>
 		<script>
 			function onSignIn(googleUser) {
-				var auth2 = gapi.auth2.getAuthInstance().id_token;
+				console.log("here");
+				var id_token = googleUser.getAuthResponse().id_token;
+				var auth2 = gapi.auth2.getAuthInstance();
 				auth2.disconnect();
 				var profile = googleUser.getBasicProfile();
 				element.innerHTML = "LOG OUT";
