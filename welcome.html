@@ -82,7 +82,6 @@
 						element.onclick="location.href = 'www.nehana.github.io/login2.html";
 						return;
 					} else {
-						console.log("in func");
 						var element = document.getElementById("login");
 						element.innerHTML = "LOG OUT";
 						element.onclick="signOut()";
@@ -90,12 +89,14 @@
 					}
 				}
 				function signOut() {
+					console.log("test");
 					gapi.auth2.getAuthInstance().signOut().then(function() {
 						console.log('user signed out');
+						sessionStorage.clear();
+						console.log(sessionStorage.email);
 						var element = document.getElementById("login");
 						element.innerHTML = "LOG IN";
 						element.onclick="location.href = 'www.nehana.github.io/login2.html";
-						sessionStorage.clear();
 						return;
 					})
 				}
