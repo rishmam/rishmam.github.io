@@ -10,4 +10,3 @@ firebase.initializeApp({
         authDomain: firebaseConfig.authDomain,
         projectId: firebaseConfig.projectId
     });
-    
